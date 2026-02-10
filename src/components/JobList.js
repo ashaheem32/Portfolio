@@ -82,39 +82,15 @@ const JobList = () => {
   const [value, setValue] = React.useState(0);
 
   const experienceItems = {
-    Google: {
-      jobTitle: "Software Engineer @",
-      duration: "JAN 2025 - PRESENT",
+    Outlier: {
+      jobTitle: "AI Trainer @",
+      duration: "OCT 2024 - PRESENT",
       desc: [
-        "Built and launched large-scale machine learning-driven conversion autobidding models at Google scale, influencing bidding decisions across millions of advertisers and users",
-        "Led end-to-end model development (data, training, evaluation, and production launch) for Proxybidder ML systems, directly driving multi-million-dollar revenue impact through improved conversion efficiency",
+        "Delivered high-quality outputs for LLM evaluation, prompt optimization, and AI model fine-tuning using Reinforcement Learning with Human Feedback (RLHF).",
+        "Completed 500+ AI focused tasks, including algorithm design and model behavior debugging, earning over $3,000 in performance-based payouts. ",
       ],
     },
-    Pinterest: {
-      jobTitle: "Software Engineer II @",
-      duration: "JUL 2022 - JAN 2025",
-      desc: [
-        "Led the development of a generative AI solution using LLMs for advanced prompt engineering, improving SEO and ad relevance, and resulting in a 20% increase in click-through rates, ad revenue and business visibility",
-        "Designed and developed an intuitive user interface for a prompt management system for 500K+ users, with key focus on accessibility, real-time collaboration features, and dynamic data visualization",
-      ],
-    },
-    Amazon: {
-      jobTitle: "Software Development Engineer II @",
-      duration: "JUL 2022 - MAY 2024",
-      desc: [
-        "Led development of end-to-end region build automation across Route 53 (AWS's DNS web service).  This enabled the launch of customer-facing global services in new regions within a day, a significant reduction from the previous time-frame of a month.",
-        "Re-built Route 53's core domain management and DNS systems to provide a better user experience to millions of customers.",
-      ],
-    },
-    Wattpad: {
-      jobTitle: "Software Engineer Intern @",
-      duration: "MAY 2020 - APR 2021",
-      desc: [
-        "Developed a responsive React web page (the new Story Details) from scratch, both on client and server side, for an app with massive scale (2 billion daily requests).",
-        "Iteratively built web experiences for 80 million users across high-traffic pages.",
-        "Collaborated with senior engineers and product management following best practices for the full software development life cycle, including coding standards, code reviews, source control management, build processes, testing, and operations.",
-      ],
-    },
+
     // "University of Toronto": {
     //   jobTitle: "Research Engineer @",
     //   duration: "MAY 2021 - SEPT 2021",
