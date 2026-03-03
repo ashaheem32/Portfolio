@@ -1,4 +1,5 @@
 import React from "react";
+import { Analytics } from "@vercel/analytics/react";
 import Intro from "./components/Intro";
 import Experience from "./components/Experience";
 import About from "./components/About";
@@ -20,6 +21,7 @@ function App() {
         <Projects></Projects>
         <Credits></Credits>
       </div>
+      <Analytics />
     </div>
   );
 }
