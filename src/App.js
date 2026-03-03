@@ -5,6 +5,7 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Credits from "./components/Credits";
 import NavBar from "./components/NavBar";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import "./App.css";
 import "./styles/Global.css";
 import "rsuite/dist/styles/rsuite-default.css";
@@ -20,6 +21,7 @@ function App() {
         <Projects></Projects>
         <Credits></Credits>
       </div>
+      <SpeedInsights />
     </div>
   );
 }
