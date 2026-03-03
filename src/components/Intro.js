@@ -5,7 +5,6 @@ import Typist from "react-typist";
 import "react-typist/dist/Typist.css";
 import EmailRoundedIcon from "@material-ui/icons/EmailRounded";
 import FadeInSection from "./FadeInSection";
-import ParticlePortrait from "./ParticlePortrait";
 
 class Intro extends React.Component {
   constructor() {
@@ -25,14 +24,11 @@ class Intro extends React.Component {
   render() {
     return (
       <div id="intro">
-        <div className="intro-simulation">
-          <ParticlePortrait />
-        </div>
         <div className="intro-block">
           <Typist avgTypingDelay={120}>
             <span className="intro-title">
               {"hi, "}
-              <span className="intro-name">{"shaheem"}</span>
+              <span className="intro-name">{"Mohammed Shaheem"}</span>
               {" here."}
             </span>
           </Typist>

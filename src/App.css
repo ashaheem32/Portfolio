@@ -30,13 +30,88 @@ html {
     transform: none;
     transition: none;
   }
+
+  .opening-banner {
+    transition: none;
+  }
+
+  .opening-banner__name {
+    animation: none;
+  }
+
+  .main-site {
+    animation: none;
+  }
 }
 
 .App {
   font-family: "NTR";
-  background-color: var(--navy);
-  display: flex;
-  margin: auto;
+  background-color: transparent;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+}
+
+.opening-banner {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(2px);
+  opacity: 1;
+  transition: opacity 0.7s ease;
+}
+
+.opening-banner.is-exiting {
+  opacity: 0;
+}
+
+.opening-banner__name {
+  margin: 0;
+  color: #f5f8ff;
+  font-size: clamp(2rem, 7vw, 4.6rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  animation: bannerNameReveal 1.2s ease-out both;
+  text-shadow: 0 0 20px rgba(138, 181, 255, 0.35);
+}
+
+@keyframes bannerNameReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+    letter-spacing: 0.18em;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    letter-spacing: 0.08em;
+  }
+}
+
+.main-site {
+  width: 100%;
+  opacity: 0;
+}
+
+.main-site.is-visible {
+  opacity: 1;
+  animation: mainContentEnter 0.5s ease-out both;
+}
+
+@keyframes mainContentEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .App-logo {
@@ -50,9 +125,14 @@ a {
 }
 
 #content {
-  width: 100vw;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  width: min(100%, 1200px);
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 64px);
+  box-sizing: border-box;
+  overflow-x: clip;
+  overflow-y: visible;
+  position: relative;
+  z-index: 1;
 }
 
 .rs-steps-horizontal .rs-steps-item-content {
@@ -78,14 +158,17 @@ a {
 
 .section-header {
   display: flex;
+  align-items: center;
   padding-bottom: 42px;
-  width: 100vw;
+  width: 100%;
 }
 
 .section-header::after {
   content: "";
   display: block;
-  width: 300px;
+  flex: 1;
+  max-width: 300px;
+  min-width: 100px;
   margin-top: 39px;
   height: 1px;
   margin-left: 20px;
@@ -99,14 +182,15 @@ a {
   font-weight: bold;
 }
 
-@media only screen and (max-width: 600px) {
-  .App {
-    flex-direction: column;
-    padding: 0px 24px;
-  }
-
+@media only screen and (max-width: 1024px) {
   #content {
-    padding: 10px 10px;
+    padding: 0 clamp(18px, 4vw, 40px);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #content {
+    padding: 0 16px;
     width: 100%;
   }
 
