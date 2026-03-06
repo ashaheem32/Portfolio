@@ -5,6 +5,7 @@ import Typist from "react-typist";
 import "react-typist/dist/Typist.css";
 import EmailRoundedIcon from "@material-ui/icons/EmailRounded";
 import FadeInSection from "./FadeInSection";
+import JumpyTitle from "./JumpyTitle";
 
 class Intro extends React.Component {
   constructor() {
@@ -13,6 +14,7 @@ class Intro extends React.Component {
       expanded: true,
       activeKey: "1",
       visible: true,
+      typingDone: false,
     };
     this.handleSelect = this.handleSelect.bind(this);
   }
@@ -25,13 +27,20 @@ class Intro extends React.Component {
     return (
       <div id="intro">
         <div className="intro-block">
-          <Typist avgTypingDelay={120}>
-            <span className="intro-title">
-              {"hi, "}
-              <span className="intro-name">{"Mohammed Shaheem"}</span>
-              {" here."}
-            </span>
-          </Typist>
+          {!this.state.typingDone ? (
+            <Typist
+              avgTypingDelay={120}
+              onTypingDone={() => this.setState({ typingDone: true })}
+            >
+              <span className="intro-title">
+                {"hi, "}
+                <span className="intro-name">{"Mohammed Shaheem"}</span>
+                {" here."}
+              </span>
+            </Typist>
+          ) : (
+            <JumpyTitle />
+          )}
           <FadeInSection>
             <div className="intro-desc">
             I'm a <b>AI & Machine Learning Engineer</b> focused on LLMs, RLHF, computer vision, and data-driven systems, 

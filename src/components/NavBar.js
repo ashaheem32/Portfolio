@@ -22,20 +22,32 @@ class NavBar extends React.Component {
               <Nav.Link href="#experience">Experience</Nav.Link>
               <Nav.Link href="#projects">Projects</Nav.Link>
             </Nav>
-            <Nav className="ml-auto">
-              <Nav.Link href="mailto:ashaheem32@gmail.com">
+            <Nav className="ml-auto nav-icon-bar">
+              <Nav.Link
+                href="mailto:ashaheem32@gmail.com"
+                className="nav-icon-link"
+              >
                 <EmailRoundedIcon style={{ fontSize: 20 }}></EmailRoundedIcon>
               </Nav.Link>
-              <Nav.Link href="https://github.com/ashaheem32" target="_blank">
+              <Nav.Link
+                href="https://github.com/ashaheem32"
+                target="_blank"
+                className="nav-icon-link"
+              >
                 <GitHubIcon style={{ fontSize: 19 }}></GitHubIcon>
               </Nav.Link>
               <Nav.Link
                 href="https://www.linkedin.com/in/shaheem32"
                 target="_blank"
+                className="nav-icon-link"
               >
                 <LinkedInIcon style={{ fontSize: 21 }}></LinkedInIcon>
               </Nav.Link>
-              <Nav.Link href="https://medium.com/@ashaheem32" target="_blank">
+              <Nav.Link
+                href="https://medium.com/@ashaheem32"
+                target="_blank"
+                className="nav-icon-link"
+              >
                 <BorderColorIcon style={{ fontSize: 20 }}></BorderColorIcon>
               </Nav.Link>
             </Nav>

@@ -52,6 +52,27 @@
   font-size: inherit;
 }
 
+.jumpy-title {
+  display: inline-block;
+  color: var(--lightest-slate);
+  font-size: clamp(2rem, 4.6vw, 4rem);
+  white-space: nowrap;
+  line-height: 1.05;
+  max-width: 100%;
+  user-select: none;
+}
+
+.jumpy-letter {
+  display: inline-block;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .jumpy-letter {
+    transform: none !important;
+  }
+}
+
 .intro-subtitle {
   font-family: "NTR", sans-serif;
   color: var(--slate);
@@ -80,13 +101,74 @@
   font-family: "NTR", sans-serif;
   padding: 12px 32px;
   cursor: pointer;
-  border: 1px solid var(--green-bright);
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
+  position: relative;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background:
+    radial-gradient(circle at 0% 0%, rgba(255, 255, 255, 0.12), transparent 55%),
+    radial-gradient(circle at 100% 100%, rgba(148, 163, 255, 0.15), transparent 60%),
+    rgba(255, 255, 255, 0.06);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 12px 32px rgba(0, 0, 0, 0.25),
+    0 0 20px rgba(148, 163, 255, 0.08);
+  color: #f9fafb !important;
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  overflow: hidden;
+  transition:
+    box-shadow 0.45s ease,
+    transform 0.45s ease,
+    border-color 0.45s ease,
+    background-position 4.5s ease-out;
+  background-position: 0% 0%, 100% 100%, 0 0;
+}
+
+.intro-contact svg {
+  color: #f9fafb !important;
+}
+
+.intro-contact::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(255, 255, 255, 0.4), transparent 50%),
+    radial-gradient(circle at 100% 0%, rgba(148, 163, 255, 0.3), transparent 55%),
+    radial-gradient(circle at 0% 100%, rgba(94, 234, 212, 0.2), transparent 55%);
+  opacity: 0;
+  mix-blend-mode: screen;
+  transform: translate3d(-10%, -8%, 0) scale(1.1);
+  transition:
+    opacity 0.45s ease-out,
+    transform 1.8s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
 }
 
 .intro-contact:hover {
-  background-color: var(--lightest-navy);
+  transform: translateY(-2px) scale(1.08);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.15),
+    0 20px 48px rgba(0, 0, 0, 0.35),
+    0 0 32px rgba(148, 163, 255, 0.12);
+  background-position: 15% 0%, 85% 100%, 0 0;
+}
+
+.intro-contact:hover::before {
+  opacity: 1;
+  transform: translate3d(6%, 4%, 0) scale(1.08);
+}
+
+.intro-contact:focus-visible {
+  outline: none;
+  transform: translateY(-2px) scale(1.08);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow:
+    0 0 0 2px rgba(94, 234, 212, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.2),
+    0 20px 48px rgba(0, 0, 0, 0.35),
+    0 0 32px rgba(148, 163, 255, 0.12);
 }
 
 /* Tablet */
