@@ -81,7 +81,20 @@ class Projects extends React.Component {
         link: "https://github.com/ashaheem32/Gold-Price-Prediction-Contest-Web-Application.git",
         open: "https://github.com/ashaheem32/Gold-Price-Prediction-Contest-Web-Application.git",
       },
-      
+      "Lead_Pilot":{
+        desc:
+          "LeadPilot AI is an AI-powered platform that automates B2B lead generation, enrichment, and outreach using a multi-agent system.",
+        techStack: "React, RAG, Multi-Agent System",
+        link: "https://github.com/ashaheem32/lead-pilot-ai-710837.git",
+        open: "https://lead-pilot-jet.vercel.app/",
+      },
+      "Utley Architecture":{
+        desc: 
+        "A boutique architecture firm specializing in residential and commercial design.",
+        techStack: "Astro,React,Tailwind CSS",
+        link: "https://github.com/ashaheem32/Utley-Architecture.git",
+        open: "utley-architecture.vercel.app",
+      }
     };
 
     return (

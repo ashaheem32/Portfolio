@@ -84,10 +84,10 @@ const JobList = () => {
   const experienceItems = {
     Outlier: {
       jobTitle: "AI Trainer @",
-      duration: "OCT 2024 - PRESENT",
+      duration: "OCT 2024 - DEC 2025",
       desc: [
         "Delivered high-quality outputs for LLM evaluation, prompt optimization, and AI model fine-tuning using Reinforcement Learning with Human Feedback (RLHF).",
-        "Completed 500+ AI focused tasks, including algorithm design and model behavior debugging, earning over $3,000 in performance-based payouts. ",
+        "Completed 1000+ AI focused tasks, including algorithm design and model behavior debugging, earning over $3,000 in performance-based payouts. ",
       ],
     },
 
