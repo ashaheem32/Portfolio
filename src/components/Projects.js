@@ -49,14 +49,14 @@ class Projects extends React.Component {
         open: "https://github.com/ashaheem32/AI-Based-Hand-Gesture-Mouse-Control-Using-Computer-Vision.git",
         image: "/assets/handgestures.jpeg",
       },
-      Portfolio: {
-        title: "portfolio.js",
+      "Lead_Pilot": {
+        title: "Lead Pilot",
         desc:
-          "A small JS library that helps with clear and succinct data presentation.",
-        techStack: "NODE.JS (EXPRESS.JS)",
-        link: "https://github.com/ashaheem32/Portfolio.git",
-        open: "https://github.com/ashaheem32/Portfolio.git",
-        image: "/assets/portfolio.png",
+          "LeadPilot AI is an AI-powered platform that automates B2B lead generation, enrichment, and outreach using a multi-agent system.",
+        techStack: "React, RAG, Multi-Agent System",
+        link: "https://github.com/ashaheem32/lead-pilot-ai-710837.git",
+        open: "https://lead-pilot-jet.vercel.app/",
+        image: "/assets/leadpilot.jpg",
       },
     };
     const projects = {
@@ -80,13 +80,6 @@ class Projects extends React.Component {
         techStack: "C#, .NET Core, Razor Pages",
         link: "https://github.com/ashaheem32/Gold-Price-Prediction-Contest-Web-Application.git",
         open: "https://github.com/ashaheem32/Gold-Price-Prediction-Contest-Web-Application.git",
-      },
-      "Lead_Pilot":{
-        desc:
-          "LeadPilot AI is an AI-powered platform that automates B2B lead generation, enrichment, and outreach using a multi-agent system.",
-        techStack: "React, RAG, Multi-Agent System",
-        link: "https://github.com/ashaheem32/lead-pilot-ai-710837.git",
-        open: "https://lead-pilot-jet.vercel.app/",
       },
       "Utley Architecture":{
         desc: 
@@ -130,31 +123,49 @@ class Projects extends React.Component {
             ))}
           </Carousel>
           <div className="project-container">
-            <ul className="projects-grid">
-              {Object.keys(projects).map((key, i) => (
-                <FadeInSection delay={`${i + 1}00ms`}>
-                  <li className="projects-card">
-                    <div className="card-header">
-                      <div className="folder-icon">
-                        <FolderOpenRoundedIcon
-                          style={{ fontSize: 35 }}
-                        ></FolderOpenRoundedIcon>
-                      </div>
-                      <ExternalLinks
-                        githubLink={projects[key]["link"]}
-                        openLink={projects[key]["open"]}
-                      ></ExternalLinks>
-                    </div>
+            <Carousel
+              className="projects-carousel"
+              interval={null}
+              indicators={false}
+              wrap
+            >
+              {(() => {
+                const keys = Object.keys(projects);
+                const groups = [];
+                for (let g = 0; g < keys.length; g += 3) {
+                  groups.push(keys.slice(g, g + 3));
+                }
+                return groups.map((group, gi) => (
+                  <Carousel.Item key={gi}>
+                    <ul className="projects-grid">
+                      {group.map((key, i) => (
+                        <li className="projects-card" key={i}>
+                          <div className="card-header">
+                            <div className="folder-icon">
+                              <FolderOpenRoundedIcon
+                                style={{ fontSize: 35 }}
+                              ></FolderOpenRoundedIcon>
+                            </div>
+                            <ExternalLinks
+                              githubLink={projects[key]["link"]}
+                              openLink={projects[key]["open"]}
+                            ></ExternalLinks>
+                          </div>
 
-                    <div className="card-title">{key}</div>
-                    <div className="card-desc">{projects[key]["desc"]}</div>
-                    <div className="card-tech">
-                      {projects[key]["techStack"]}
-                    </div>
-                  </li>
-                </FadeInSection>
-              ))}
-            </ul>
+                          <div className="card-title">{key}</div>
+                          <div className="card-desc">
+                            {projects[key]["desc"]}
+                          </div>
+                          <div className="card-tech">
+                            {projects[key]["techStack"]}
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </Carousel.Item>
+                ));
+              })()}
+            </Carousel>
           </div>
         </FadeInSection>
       </div>

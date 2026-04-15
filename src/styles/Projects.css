@@ -9,6 +9,9 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 @media (max-width: 1080px) {
@@ -21,6 +24,71 @@
   .projects-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.projects-carousel {
+  position: relative;
+  padding: 0 50px;
+  margin-top: 20px;
+}
+
+.projects-carousel .carousel-inner {
+  height: auto;
+  min-height: 320px;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.projects-carousel .carousel-inner:hover {
+  transform: none;
+}
+
+.projects-carousel .carousel-inner {
+  overflow: hidden;
+}
+
+.projects-carousel .carousel-item {
+  transition: transform 0.6s ease-in-out;
+}
+
+.projects-carousel .projects-grid {
+  align-items: stretch;
+}
+
+.projects-carousel .projects-card {
+  height: 390px;
+}
+
+.projects-carousel .card-tech {
+  margin-top: auto;
+}
+
+.projects-carousel .card-desc {
+  padding-bottom: 0;
+}
+
+.projects-carousel .carousel-control-prev,
+.projects-carousel .carousel-control-next {
+  width: 44px;
+  opacity: 0.85;
+}
+
+.projects-carousel .carousel-control-prev {
+  left: -4px;
+}
+
+.projects-carousel .carousel-control-next {
+  right: -4px;
+}
+
+.projects-carousel .carousel-control-prev-icon,
+.projects-carousel .carousel-control-next-icon {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  padding: 18px;
+  background-size: 55% 55%;
 }
 
 .projects-card {
