@@ -229,8 +229,8 @@
 
   .intro-subtitle {
     text-align: center;
-    font-size: 28px;
-    display: none;
+    font-size: clamp(1rem, 5vw, 1.5rem);
+    display: block;
   }
 
   .intro-desc {

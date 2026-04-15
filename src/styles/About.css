@@ -100,7 +100,9 @@
   }
 
   .about-image img {
-    display: none;
+    display: block;
+    max-width: 200px;
+    margin: 0 auto 24px;
   }
 
   .about-content {

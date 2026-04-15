@@ -314,6 +314,34 @@
   }
 
   .carousel {
-    display: none;
+    display: block;
+    padding: 0 12px;
+  }
+
+  .carousel-inner {
+    height: 260px;
+    border-radius: 16px;
+  }
+
+  .carousel img {
+    object-fit: cover;
+  }
+
+  .carousel-caption {
+    max-width: 92%;
+    padding: 8px;
+    bottom: 8px;
+  }
+
+  .carousel-caption h3 {
+    font-size: 20px;
+  }
+
+  .carousel-caption p {
+    font-size: 14px;
+  }
+
+  .carousel-caption p.techStack {
+    font-size: 12px;
   }
 }
