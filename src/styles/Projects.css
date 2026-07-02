@@ -267,6 +267,13 @@
   transform: scale(1.01);
 }
 
+.spotlight-image-link {
+  display: block;
+  height: 100%;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .carousel img {
   object-fit: contain;
   height: 100%;

@@ -31,23 +31,13 @@ class Projects extends React.Component {
         open: "https://nearmeai.vercel.app/",
         image: "/assets/nearmeai.png",
       },
-      // Truth: {
-      //   title: "truth",
-      //   desc:
-      //     "A three.js simulation of the planet system revolving around a monolith.",
-      //   techStack: "JAVASCRIPT (THREE.JS)",
-      //   link: "https://github.com/gazijarin/truth",
-      //   open: "https://gazijarin.github.io/Truth/",
-      //   image: "/assets/truth.png"
-      // },
-      "AI-Based Hand Gesture Mouse Control Using Computer Vision": {
-        title: "AI-Based Hand Gesture Mouse Control Using Computer Vision",
+      "Chat Seeker": {
+        title: "Chat Seeker",
         desc:
-          "Developed a real-time AI system using MediaPipe and OpenCV to control the mouse with hand gestures.",
-        techStack: "Python, OpenCV, MediaPipe",
-        link: "https://github.com/ashaheem32/AI-Based-Hand-Gesture-Mouse-Control-Using-Computer-Vision.git",
-        open: "https://github.com/ashaheem32/AI-Based-Hand-Gesture-Mouse-Control-Using-Computer-Vision.git",
-        image: "/assets/handgestures.jpeg",
+          "AI-powered chat analysis dashboard that turns any chat export into deep insights on emotion, vocabulary, conflicts, love languages, and overall communication health.",
+        techStack: "Next.js, FastAPI, Claude AI, pgvector",
+        link: "https://github.com/ashaheem32/Chat_seeker.git",
+        image: "/assets/chatseeker.png",
       },
       "Lead_Pilot": {
         title: "Lead Pilot",
@@ -82,12 +72,25 @@ class Projects extends React.Component {
         open: "https://github.com/ashaheem32/Gold-Price-Prediction-Contest-Web-Application.git",
       },
       "Utley Architecture":{
-        desc: 
+        desc:
         "A boutique architecture firm specializing in residential and commercial design.",
         techStack: "Astro,React,Tailwind CSS",
         link: "https://github.com/ashaheem32/Utley-Architecture.git",
         open: "utley-architecture.vercel.app",
-      }
+      },
+      "AI-Based Hand Gesture Mouse Control Using Computer Vision": {
+        desc:
+          "Developed a real-time AI system using MediaPipe and OpenCV to control the mouse with hand gestures.",
+        techStack: "Python, OpenCV, MediaPipe",
+        link: "https://github.com/ashaheem32/AI-Based-Hand-Gesture-Mouse-Control-Using-Computer-Vision.git",
+        open: "https://github.com/ashaheem32/AI-Based-Hand-Gesture-Mouse-Control-Using-Computer-Vision.git",
+      },
+      "Store Intelligence": {
+        desc:
+          "Real-time retail store intelligence system — an end-to-end pipeline from raw CCTV footage to a live analytics API. Detects visitors, tracks movement, computes conversion rates, and alerts on operational anomalies in real time.",
+        techStack: "Python, YOLOv8, ByteTrack, FastAPI",
+        link: "https://github.com/ashaheem32/Store_Intelligence.git",
+      },
     };
 
     return (
@@ -99,11 +102,18 @@ class Projects extends React.Component {
           <Carousel>
             {Object.keys(spotlightProjects).map((key, i) => (
               <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src={spotlightProjects[key]["image"]}
-                  alt={key}
-                />
+                <a
+                  href={spotlightProjects[key]["link"]}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="d-block spotlight-image-link"
+                >
+                  <img
+                    className="d-block w-100"
+                    src={spotlightProjects[key]["image"]}
+                    alt={key}
+                  />
+                </a>
                 <div className="caption-bg">
                   <Carousel.Caption>
                     <h3>{spotlightProjects[key]["title"]}</h3>
