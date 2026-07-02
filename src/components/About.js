@@ -19,10 +19,12 @@ class About extends React.Component {
   render() {
     const one = (
       <p>
-        Aspiring <b>AI and Machine Learning Engineer</b> with practical experience in LLM evaluation, 
-        reinforcement learning with human feedback (RLHF), computer vision, and data science. 
-        Currently a Freelance Coding Expert at <b>Outlier AI</b> , where I work on prompt optimization, 
-        algorithm design, and model behavior analysis to enhance the quality, alignment, and performance of large language models.
+        Aspiring AI/ML Engineer experienced in LLM evaluation, RLHF, 
+        computer vision, and data science. Currently a Freelance Coding Expert at Outlier AI, 
+        focused on prompt optimization, algorithm design, and model behavior analysis. 
+        Skilled in Python, SQL, TensorFlow, Scikit-learn, and LLM frameworks like the OpenAI API and LangChain, 
+        with a track record of building real-world AI applications. Seeking internship or entry-level roles in AI, 
+        Machine Learning, or Data Science.
       </p>
     );
     const two = (
@@ -34,9 +36,9 @@ class About extends React.Component {
 
     const tech_stack = [
       "Python",
+      "RAG",
       "Typescript",
-      "React.js",
-      "SQL",
+      "MySQL",
 
     ];
 
