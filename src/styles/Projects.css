@@ -326,7 +326,7 @@
   }
 
   .carousel-inner {
-    height: 260px;
+    height: 300px;
     border-radius: 16px;
   }
 
@@ -334,10 +334,15 @@
     object-fit: cover;
   }
 
+  /* Legible caption over the spotlight image on small screens */
   .carousel-caption {
-    max-width: 92%;
-    padding: 8px;
-    bottom: 8px;
+    max-width: 94%;
+    padding: 10px 12px;
+    bottom: 10px;
+    background: rgba(10, 12, 20, 0.6);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
   }
 
   .carousel-caption h3 {
@@ -348,7 +353,50 @@
     font-size: 14px;
   }
 
+  /* Keep the description from overflowing the fixed-height image */
+  .carousel-caption p:not(.techStack) {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 6px;
+  }
+
   .carousel-caption p.techStack {
     font-size: 12px;
+  }
+
+  /* Bottom project cards: give arrows room without cramping the card,
+     and let cards grow so long descriptions aren't clipped */
+  .projects-carousel {
+    padding: 0 34px;
+  }
+
+  .projects-carousel .carousel-control-prev {
+    left: -10px;
+  }
+
+  .projects-carousel .carousel-control-next {
+    right: -10px;
+  }
+
+  .projects-carousel .carousel-control-prev-icon,
+  .projects-carousel .carousel-control-next-icon {
+    padding: 12px;
+  }
+
+  .projects-carousel .projects-card {
+    height: auto;
+    min-height: 300px;
+  }
+
+  .projects-card {
+    padding: 1.5rem 1.25rem;
+    border-radius: 14px;
+  }
+
+  .card-desc {
+    font-size: 16px;
+    padding-bottom: 24px;
   }
 }
