@@ -2,7 +2,7 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import BorderColorIcon from "@material-ui/icons/BorderColor";
+import DescriptionIcon from "@material-ui/icons/Description";
 import EmailRoundedIcon from "@material-ui/icons/EmailRounded";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
@@ -44,11 +44,13 @@ class NavBar extends React.Component {
                 <LinkedInIcon style={{ fontSize: 21 }}></LinkedInIcon>
               </Nav.Link>
               <Nav.Link
-                href="https://medium.com/@ashaheem32"
-                target="_blank"
+                href="/assets/Mohammed_Shaheem_CV.pdf"
+                download="Mohammed_Shaheem_CV.pdf"
+                title="Download CV"
+                aria-label="Download CV"
                 className="nav-icon-link"
               >
-                <BorderColorIcon style={{ fontSize: 20 }}></BorderColorIcon>
+                <DescriptionIcon style={{ fontSize: 20 }}></DescriptionIcon>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
