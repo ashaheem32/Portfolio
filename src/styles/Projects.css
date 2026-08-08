@@ -267,6 +267,12 @@
   transform: scale(1.01);
 }
 
+/* Without this the item collapses to the image's intrinsic height, leaving the
+   absolutely-positioned caption to overflow above it and get clipped. */
+.carousel.slide .carousel-item {
+  height: 100%;
+}
+
 .spotlight-image-link {
   display: block;
   height: 100%;
@@ -278,6 +284,12 @@
   object-fit: contain;
   height: 100%;
   opacity: 0.5;
+}
+
+/* Designed cover art fits the frame at every width; only photos get cropped. */
+.carousel .spotlight-image--contain {
+  object-fit: contain;
+  opacity: 0.72;
 }
 
 .carousel-caption {
@@ -295,7 +307,8 @@
   color: var(--lightest-slate);
 }
 
-.carousel-caption p {
+.carousel-caption p,
+.carousel-caption .caption-desc {
   font-family: "NTR", sans-serif;
   font-weight: bold;
   font-size: 18px;
@@ -334,8 +347,9 @@
     object-fit: cover;
   }
 
-  /* Legible caption over the spotlight image on small screens */
-  .carousel-caption {
+  /* Legible caption over the spotlight image on small screens. Needs the extra
+     specificity to beat Bootstrap's own .carousel-caption rules. */
+  .carousel.slide .carousel-caption {
     max-width: 94%;
     padding: 10px 12px;
     bottom: 10px;
@@ -349,12 +363,13 @@
     font-size: 20px;
   }
 
-  .carousel-caption p {
+  .carousel-caption p,
+  .carousel-caption .caption-desc {
     font-size: 14px;
   }
 
   /* Keep the description from overflowing the fixed-height image */
-  .carousel-caption p:not(.techStack) {
+  .carousel-caption .caption-desc {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;

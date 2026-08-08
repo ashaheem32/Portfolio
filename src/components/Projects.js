@@ -2,7 +2,6 @@ import React from "react";
 import "../styles/Projects.css";
 import FolderOpenRoundedIcon from "@material-ui/icons/FolderOpenRounded";
 import FadeInSection from "./FadeInSection";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import Carousel from "react-bootstrap/Carousel";
 import ExternalLinks from "./ExternalLinks";
 
@@ -39,17 +38,25 @@ class Projects extends React.Component {
         link: "https://github.com/ashaheem32/Chat_seeker.git",
         image: "/assets/chatseeker.png",
       },
-      "Lead_Pilot": {
-        title: "Lead Pilot",
+      "JurisGPT": {
+        title: "JurisGPT",
+        desc:
+          "A retrieval-augmented legal research assistant that answers questions on Indian startup and corporate law with citations grounded in the actual statutes and case law it retrieves.",
+        techStack: "Next.js, FastAPI, ChromaDB, RAG",
+        link: "https://github.com/Bruhadev45/Juris-GPT.git",
+        image: "/assets/jurisgpt.svg",
+        // Vector cover art, not a screenshot — must never be cropped.
+        imageContain: true,
+      },
+    };
+    const projects = {
+      "Lead Pilot": {
         desc:
           "LeadPilot AI is an AI-powered platform that automates B2B lead generation, enrichment, and outreach using a multi-agent system.",
         techStack: "React, RAG, Multi-Agent System",
         link: "https://github.com/ashaheem32/lead-pilot-ai-710837.git",
         open: "https://lead-pilot-jet.vercel.app/",
-        image: "/assets/leadpilot.jpg",
       },
-    };
-    const projects = {
       "Maternity Weight Prediction": {
         desc:
           "Predicting newborn weight using maternal and pregnancy features through data analysis and machine learning.",
@@ -63,13 +70,6 @@ class Projects extends React.Component {
         techStack: "Python, Machine Learning",
         link:
           "https://github.com/ashaheem32/AI-Based-Credit-Card-Application-Approval-System.git",
-      },
-      "Gold Price Prediction Contest Web Application": {
-        desc:
-          "A robust ASP.NET Core 8 Razor Pages application designed to manage a gold price prediction contest.",
-        techStack: "C#, .NET Core, Razor Pages",
-        link: "https://github.com/ashaheem32/Gold-Price-Prediction-Contest-Web-Application.git",
-        open: "https://github.com/ashaheem32/Gold-Price-Prediction-Contest-Web-Application.git",
       },
       "Utley Architecture":{
         desc:
@@ -101,7 +101,7 @@ class Projects extends React.Component {
           </div>
           <Carousel>
             {Object.keys(spotlightProjects).map((key, i) => (
-              <Carousel.Item>
+              <Carousel.Item key={key}>
                 <a
                   href={spotlightProjects[key]["link"]}
                   target="_blank"
@@ -109,7 +109,11 @@ class Projects extends React.Component {
                   className="d-block spotlight-image-link"
                 >
                   <img
-                    className="d-block w-100"
+                    className={`d-block w-100${
+                      spotlightProjects[key]["imageContain"]
+                        ? " spotlight-image--contain"
+                        : ""
+                    }`}
                     src={spotlightProjects[key]["image"]}
                     alt={key}
                   />
@@ -117,11 +121,11 @@ class Projects extends React.Component {
                 <div className="caption-bg">
                   <Carousel.Caption>
                     <h3>{spotlightProjects[key]["title"]}</h3>
-                    <p>
+                    <div className="caption-desc">
                       {spotlightProjects[key]["desc"]}
-                      <p className="techStack">
-                        {spotlightProjects[key]["techStack"]}
-                      </p>
+                    </div>
+                    <p className="techStack">
+                      {spotlightProjects[key]["techStack"]}
                     </p>
                     <ExternalLinks
                       githubLink={spotlightProjects[key]["link"]}

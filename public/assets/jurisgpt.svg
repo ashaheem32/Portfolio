@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img" aria-label="JurisGPT — citation-grounded legal research assistant">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b1830"/>
+      <stop offset="55%" stop-color="#0a1526"/>
+      <stop offset="100%" stop-color="#070f1d"/>
+    </linearGradient>
+
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#64ffda" stop-opacity="0.18"/>
+      <stop offset="60%" stop-color="#3fb1e6" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#3fb1e6" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="brass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f2cd37"/>
+      <stop offset="100%" stop-color="#c9922a"/>
+    </linearGradient>
+
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#16233b"/>
+      <stop offset="100%" stop-color="#0e1a2d"/>
+    </linearGradient>
+
+    <!-- Stud grid, echoing the site's LEGO baseplate background -->
+    <pattern id="studs" width="58" height="58" patternUnits="userSpaceOnUse">
+      <circle cx="29" cy="29" r="15" fill="#12233d" opacity="0.55"/>
+      <circle cx="24" cy="24" r="7" fill="#22406b" opacity="0.30"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <rect width="1200" height="600" fill="url(#studs)" opacity="0.5"/>
+  <ellipse cx="200" cy="320" rx="300" ry="270" fill="url(#halo)"/>
+
+  <!-- Scales of justice. Kept left of x=300 so the centred slide caption
+       (max-width 500px over a 1000px stage) never sits on top of it. -->
+  <g transform="translate(-100 60) scale(0.78)" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M298 484 h124 l24 32 h-172 z" fill="url(#brass)" opacity="0.85"/>
+    <rect x="352" y="196" width="16" height="292" rx="6" fill="url(#brass)" opacity="0.9"/>
+    <circle cx="360" cy="188" r="16" fill="url(#brass)"/>
+    <rect x="188" y="212" width="344" height="12" rx="6" fill="url(#brass)"/>
+
+    <!-- left pan, weighed down by the statutes -->
+    <path d="M212 224 v46" stroke="#f2cd37" stroke-width="4" opacity="0.85" fill="none"/>
+    <path d="M212 270 l-58 22 h116 z" fill="none" stroke="#f2cd37" stroke-width="3" opacity="0.55"/>
+    <path d="M150 292 a62 44 0 0 0 124 0 z" fill="url(#brass)" opacity="0.9"/>
+    <text x="212" y="286" font-family="Georgia, 'Times New Roman', serif" font-size="46"
+          fill="#0a1526" text-anchor="middle" opacity="0.9">§</text>
+
+    <!-- right pan -->
+    <path d="M508 224 v86" stroke="#f2cd37" stroke-width="4" opacity="0.85" fill="none"/>
+    <path d="M508 310 l-58 22 h116 z" fill="none" stroke="#f2cd37" stroke-width="3" opacity="0.55"/>
+    <path d="M446 332 a62 44 0 0 0 124 0 z" fill="url(#brass)" opacity="0.9"/>
+  </g>
+
+  <!-- Retrieval links: cited sources feeding the answer -->
+  <g stroke="#64ffda" stroke-width="2.5" fill="none" opacity="0.4" stroke-dasharray="9 11">
+    <path d="M812 193 C 700 205, 560 280, 320 312"/>
+    <path d="M842 297 C 720 302, 560 312, 320 318"/>
+    <path d="M812 401 C 700 392, 560 350, 320 324"/>
+  </g>
+  <g fill="#64ffda" opacity="0.7">
+    <circle cx="812" cy="193" r="6"/>
+    <circle cx="842" cy="297" r="6"/>
+    <circle cx="812" cy="401" r="6"/>
+  </g>
+
+  <!-- Cited source cards -->
+  <g>
+    <g transform="translate(825 118)">
+      <rect width="330" height="150" rx="16" fill="url(#card)" stroke="#2b436b" stroke-width="2"/>
+      <rect x="24" y="26" width="150" height="12" rx="6" fill="#64ffda" opacity="0.85"/>
+      <rect x="24" y="58" width="278" height="9" rx="4.5" fill="#8ea6c8" opacity="0.42"/>
+      <rect x="24" y="80" width="250" height="9" rx="4.5" fill="#8ea6c8" opacity="0.42"/>
+      <rect x="24" y="102" width="196" height="9" rx="4.5" fill="#8ea6c8" opacity="0.42"/>
+      <text x="302" y="36" font-family="Georgia, serif" font-size="24" fill="#f2cd37"
+            text-anchor="end" opacity="0.8">§</text>
+    </g>
+
+    <g transform="translate(855 222)">
+      <rect width="330" height="150" rx="16" fill="url(#card)" stroke="#2b436b" stroke-width="2"/>
+      <rect x="24" y="26" width="180" height="12" rx="6" fill="#3fb1e6" opacity="0.85"/>
+      <rect x="24" y="58" width="278" height="9" rx="4.5" fill="#8ea6c8" opacity="0.42"/>
+      <rect x="24" y="80" width="238" height="9" rx="4.5" fill="#8ea6c8" opacity="0.42"/>
+      <rect x="24" y="102" width="264" height="9" rx="4.5" fill="#8ea6c8" opacity="0.42"/>
+      <text x="302" y="36" font-family="Georgia, serif" font-size="24" fill="#f2cd37"
+            text-anchor="end" opacity="0.8">§</text>
+    </g>
+
+    <g transform="translate(825 326)">
+      <rect width="330" height="150" rx="16" fill="url(#card)" stroke="#2b436b" stroke-width="2"/>
+      <rect x="24" y="26" width="132" height="12" rx="6" fill="#64ffda" opacity="0.7"/>
+      <rect x="24" y="58" width="250" height="9" rx="4.5" fill="#8ea6c8" opacity="0.42"/>
+      <rect x="24" y="80" width="278" height="9" rx="4.5" fill="#8ea6c8" opacity="0.42"/>
+      <rect x="24" y="102" width="210" height="9" rx="4.5" fill="#8ea6c8" opacity="0.42"/>
+      <text x="302" y="36" font-family="Georgia, serif" font-size="24" fill="#f2cd37"
+            text-anchor="end" opacity="0.8">§</text>
+    </g>
+  </g>
+</svg>
