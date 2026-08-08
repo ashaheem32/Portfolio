@@ -139,10 +139,6 @@ a {
   z-index: 1;
 }
 
-.rs-steps-horizontal .rs-steps-item-content {
-  text-align: left;
-}
-
 ::selection {
   background: var(--lightest-navy);
 }
