@@ -7,10 +7,31 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import FadeInSection from "./FadeInSection";
 
-const isHorizontal = window.innerWidth < 600;
+const HORIZONTAL_BREAKPOINT = 600;
+
+// Read live rather than once at import time, so rotating a phone or resizing
+// actually switches the tab layout.
+function useIsHorizontal() {
+  const [isHorizontal, setIsHorizontal] = React.useState(
+    () => window.innerWidth < HORIZONTAL_BREAKPOINT
+  );
+
+  React.useEffect(() => {
+    const onResize = () => {
+      setIsHorizontal(window.innerWidth < HORIZONTAL_BREAKPOINT);
+    };
+
+    window.addEventListener("resize", onResize, { passive: true });
+    onResize();
+
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
+  return isHorizontal;
+}
 
 function TabPanel(props) {
-  const { children, value, index, ...other } = props;
+  const { children, value, index, isHorizontal, ...other } = props;
 
   if (isHorizontal) {
     return (
@@ -23,7 +44,7 @@ function TabPanel(props) {
       >
         {value === index && (
           <Box p={3}>
-            <Typography>{children}</Typography>
+            <Typography component="div">{children}</Typography>
           </Box>
         )}
       </div>
@@ -38,7 +59,7 @@ function TabPanel(props) {
       >
         {value === index && (
           <Box p={3}>
-            <Typography>{children}</Typography>
+            <Typography component="div">{children}</Typography>
           </Box>
         )}
       </div>
@@ -50,9 +71,10 @@ TabPanel.propTypes = {
   children: PropTypes.node,
   index: PropTypes.any.isRequired,
   value: PropTypes.any.isRequired,
+  isHorizontal: PropTypes.bool,
 };
 
-function a11yProps(index) {
+function a11yProps(index, isHorizontal) {
   if (isHorizontal) {
     return {
       id: `full-width-tab-${index}`,
@@ -79,6 +101,7 @@ const useStyles = makeStyles((theme) => ({
 
 const JobList = () => {
   const classes = useStyles();
+  const isHorizontal = useIsHorizontal();
   const [value, setValue] = React.useState(0);
 
   const experienceItems = {
@@ -90,39 +113,6 @@ const JobList = () => {
         "Completed 1000+ AI focused tasks, including algorithm design and model behavior debugging, earning over $3,000 in performance-based payouts. ",
       ],
     },
-
-    // "University of Toronto": {
-    //   jobTitle: "Research Engineer @",
-    //   duration: "MAY 2021 - SEPT 2021",
-    //   desc: [
-    //     "Developed and researched an NLP-based framework using state-of-the-art tools like Spacy and Stanza to facilitate the derivation of requirements from health data by leveraging syntactic dependencies, entity-recognition and rule-based match-making.",
-    //     " Application selected for DCS Research Award ($4,000) as part of the ”Visualizing Privacy Analysis Results” project led by Professor Marsha Chechik."
-    //   ]
-    // },
-    // Centivizer: {
-    //   jobTitle: "Software Developer @",
-    //   duration: "SEPT 2019 - APR 2020",
-    //   desc: [
-    //     "Developed interactive and neural-activation technologies to stimulate physical and cognitive functions in order to slow the progression of neurodegenerative disorders.",
-    //     "Leveraged WebRTC to develop and maintain a Node.js online video-streaming platform in real-time competitive-mode games to research the effects of active stimulation for those suffering from dementia."
-    //   ]
-    // },
-    // TDSB: {
-    //   jobTitle: "Software Engineer @",
-    //   duration: "SEPT 2019 - DEC 2020",
-    //   desc: [
-    //     "Co-developed homework management software integrable with Google Classroom by utilizing the Python’s Flask micro-framework for the back-end API and Vue.js for the front-end UI, in order to translate business requirements into a functional full-stack application."
-    //   ]
-    // },
-    // "Orange Gate": {
-    //   jobTitle: "Software Developer Intern @",
-    //   duration: "MAY 2019 - AUG 2019",
-    //   desc: [
-    //     "Developed a Node.js smart home system through Facebook’s Messenger integrated with Bocco sensors and other smart devices (Nest camera, TPLink smart plugs) to derive conclusions about the current state of the home",
-    //     "Identified continuous improvements in data quality, design reports and coding activities, presenting results and findings to internal business stakeholders.",
-    //     "Relevant technologies/tools used: DialogFlow, Vision, AutoML, Messenger Bot API, MongoDB."
-    //   ]
-    // }
   };
 
   const handleChange = (event, newValue) => {
@@ -132,18 +122,19 @@ const JobList = () => {
   return (
     <div className={classes.root}>
       <Tabs
-        orientation={!isHorizontal ? "vertical" : null}
-        variant={isHorizontal ? "fullWidth" : "scrollable"}
+        orientation={isHorizontal ? "horizontal" : "vertical"}
+        variant="scrollable"
+        scrollButtons="auto"
         value={value}
         onChange={handleChange}
         className={classes.tabs}
       >
         {Object.keys(experienceItems).map((key, i) => (
-          <Tab label={isHorizontal ? `0${i}.` : key} {...a11yProps(i)} />
+          <Tab key={key} label={key} {...a11yProps(i, isHorizontal)} />
         ))}
       </Tabs>
       {Object.keys(experienceItems).map((key, i) => (
-        <TabPanel value={value} index={i}>
+        <TabPanel key={key} value={value} index={i} isHorizontal={isHorizontal}>
           <span className="joblist-job-title">
             {experienceItems[key]["jobTitle"] + " "}
           </span>
@@ -154,8 +145,8 @@ const JobList = () => {
           <ul className="job-description">
             {experienceItems[key]["desc"].map(function (descItem, i) {
               return (
-                <FadeInSection delay={`${i + 1}00ms`}>
-                  <li key={i}>{descItem}</li>
+                <FadeInSection as="li" key={descItem} delay={`${i + 1}00ms`}>
+                  {descItem}
                 </FadeInSection>
               );
             })}

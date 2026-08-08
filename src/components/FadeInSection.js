@@ -1,6 +1,8 @@
 import React from "react";
 
-export default function FadeInSection(props) {
+// `as` lets callers pick the wrapper element — a plain <div> is invalid inside
+// a <ul>, so list items pass as="li".
+export default function FadeInSection({ as: Wrapper = "div", delay, children }) {
   const [isVisible, setVisible] = React.useState(false);
   const domRef = React.useRef();
 
@@ -33,12 +35,12 @@ export default function FadeInSection(props) {
   }, []);
 
   return (
-    <div
+    <Wrapper
       className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
-      style={{ transitionDelay: `${props.delay}` }}
+      style={{ transitionDelay: delay || undefined }}
       ref={domRef}
     >
-      {props.children}
-    </div>
+      {children}
+    </Wrapper>
   );
 }
