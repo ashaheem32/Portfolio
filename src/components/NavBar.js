@@ -11,7 +11,7 @@ import "../styles/NavBar.css";
 class NavBar extends React.Component {
   render() {
     return (
-      <Navbar fixed="top" className="bg-body-tertiary">
+      <Navbar fixed="top" expand="lg" collapseOnSelect className="bg-body-tertiary">
         <Container>
           <Navbar.Brand href="#">Mohammed Shaheem Abdul Salam</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

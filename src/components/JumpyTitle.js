@@ -12,16 +12,29 @@ function JumpyRun({ text, className, indexOffset = 0 }) {
 
   return (
     <span className={className}>
-      {letters.map((letter) => (
-        <span
-          key={letter.key}
-          className="jumpy-letter"
-          data-jumpy-letter="1"
-          data-jumpy-index={letter.index + indexOffset}
-        >
-          {letter.char === " " ? "\u00A0" : letter.char}
-        </span>
-      ))}
+      {letters.map((letter) => {
+        const node = (
+          <span
+            key={letter.key}
+            className="jumpy-letter"
+            data-jumpy-letter="1"
+            data-jumpy-index={letter.index + indexOffset}
+          >
+            {letter.char === " " ? "\u00A0" : letter.char}
+          </span>
+        );
+
+        // Adjacent inline-block letters give the browser nowhere to break, so
+        // spaces carry an explicit wrap opportunity for narrow screens.
+        return letter.char === " " ? (
+          <React.Fragment key={letter.key}>
+            {node}
+            <wbr />
+          </React.Fragment>
+        ) : (
+          node
+        );
+      })}
     </span>
   );
 }
