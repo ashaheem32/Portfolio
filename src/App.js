@@ -5,10 +5,9 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Credits from "./components/Credits";
 import NavBar from "./components/NavBar";
-import SpaceBackground from "./components/SpaceBackground";
+import LegoBackground from "./components/LegoBackground";
 import "./App.css";
 import "./styles/Global.css";
-import "rsuite/dist/styles/rsuite-default.css";
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -41,7 +40,7 @@ function App() {
 
   return (
     <div className="App">
-      <SpaceBackground />
+      <LegoBackground />
       {showSplash && (
         <div className={`opening-banner ${fadeSplash ? "is-exiting" : ""}`}>
           <h1 className="opening-banner__name">Mohammed Shaheem</h1>

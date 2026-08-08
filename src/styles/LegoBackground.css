@@ -1,0 +1,55 @@
+.lego-background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background: linear-gradient(180deg, #060d1a 0%, #0a1526 55%, #060c17 100%);
+}
+
+.lego-background__plate {
+  position: absolute;
+  inset: 0;
+  background-repeat: repeat;
+  background-position: center;
+  opacity: 0.85;
+}
+
+.lego-background__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Keeps the studded plate from competing with the copy in the centre column. */
+.lego-background__veil {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse 60% 75% at 50% 45%,
+      rgba(4, 10, 20, 0.82) 0%,
+      rgba(4, 10, 20, 0.55) 45%,
+      rgba(4, 10, 20, 0) 78%
+    ),
+    linear-gradient(180deg, rgba(4, 10, 20, 0.45) 0%, rgba(4, 10, 20, 0) 18%);
+}
+
+/* Phones have no gutter, so the copy needs a heavier backdrop to sit on. */
+@media only screen and (max-width: 700px) {
+  .lego-background__plate {
+    opacity: 0.7;
+  }
+
+  .lego-background__veil {
+    background:
+      radial-gradient(
+        ellipse 85% 60% at 50% 45%,
+        rgba(4, 10, 20, 0.88) 0%,
+        rgba(4, 10, 20, 0.62) 55%,
+        rgba(4, 10, 20, 0.15) 100%
+      ),
+      linear-gradient(180deg, rgba(4, 10, 20, 0.5) 0%, rgba(4, 10, 20, 0) 14%);
+  }
+}
