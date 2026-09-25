@@ -1,112 +1,123 @@
-#about {
-  margin: auto;
-  width: 100%;
-  max-width: 1000px;
-  padding: 72px 0;
+.about-section {
+  padding-top: var(--section-space);
 }
-
-.about-description ul {
-  padding-top: 20px;
-  list-style-type: none;
+.about-heading {
+  max-width: 1080px;
+  margin-left: 15%;
+  margin-bottom: clamp(36px, 6vw, 85px);
+}
+.about-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(150px, 220px));
-  gap: 8px 20px;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);
+  gap: clamp(32px, 6vw, 110px);
+  max-width: 1150px;
+  margin: 0 auto;
+  align-items: start;
 }
-
-.about-description li {
+.portrait-wrap {
   position: relative;
-  padding-left: 20px;
-  font-size: 18px;
-  color: var(--slate);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 6px;
 }
-
-.about-description li::before {
-  content: "▹    ";
-  color: var(--green-bright);
-  position: absolute;
-  left: 0;
-}
-
-.about-content {
-  display: flex;
-  flex-direction: row;
-  gap: 24px;
-  align-items: flex-start;
-}
-
-.about-description {
-  font-family: "NTR", sans-serif;
-  color: var(--slate);
-  max-width: 600px;
-  font-size: 22px;
-  text-align: left;
-  margin: 0;
-}
-
-.about-description a,
-.about-description b {
-  font-size: 21px;
-  font-weight: bold;
-}
-
-.about-image {
-  padding-left: 16px;
-}
-
-.about-image img {
-  max-width: 300px;
+.portrait-wrap img {
+  width: 100%;
   height: auto;
-  border-radius: 10px;
-  margin-left: 30px;
-  box-shadow: 6px 13px 23px -5px rgba(0, 0, 0, 0.46);
-  border: none;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  filter: saturate(0.7);
+  transition: filter 500ms;
 }
-
-@media only screen and (max-width: 788px) {
-  .about-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .about-description {
-    max-width: 100%;
-  }
-
-  .about-image img {
-    max-width: 200px;
+.portrait-wrap:hover img {
+  filter: saturate(1);
+}
+.portrait-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 70px 24px 24px;
+  background: linear-gradient(transparent, #000b);
+  font-size: 13px;
+}
+.about-copy > p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+.about-copy > .about-lead {
+  color: var(--text);
+  font-size: clamp(23px, 2.2vw, 32px);
+  letter-spacing: -0.04em;
+  line-height: 1.35;
+  margin-bottom: 28px;
+}
+.about-lead span {
+  color: var(--muted);
+}
+.about-technologies {
+  margin: 30px 0;
+}
+.about-technologies > span {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--muted);
+  margin-bottom: 15px;
+}
+.about-technologies > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tech-pill {
+  font-size: 12px;
+  padding: 8px 12px;
+  border: 1px solid #363632;
+  border-radius: 50px;
+  display: inline-block;
+  line-height: 1.2;
+}
+.about-copy > .about-personal {
+  padding-top: 23px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+}
+.about-copy .button {
+  margin-top: 6px;
+}
+@media (max-width: 900px) {
+  .about-heading {
     margin-left: 0;
+    margin-bottom: 42px;
   }
 }
-
-.about-image:hover {
-  transform: translateY(-7px);
-}
-
-@media only screen and (max-width: 600px) {
-  #about {
-    padding: 48px 0;
-    padding-left: unset;
-    padding-right: unset;
+@media (max-width: 700px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 38px;
   }
-
-  .about-description {
-    font-size: 18px;
-    text-align: left;
+  .portrait-wrap {
+    max-width: 480px;
+    width: 100%;
   }
-
-  .about-description a,
-  .about-description b {
-    font-size: 17px;
+  .portrait-wrap img {
+    aspect-ratio: 1 / 1.1;
+    object-position: center 25%;
   }
-
-  .about-image img {
-    display: block;
-    max-width: 200px;
-    margin: 0 auto 24px;
+  .about-copy > .about-lead {
+    font-size: clamp(24px, 5vw, 30px);
   }
-
-  .about-content {
-    display: flex;
-    align-items: stretch;
+  .about-copy > p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  .about-copy > .about-personal {
+    font-size: 14px;
   }
 }

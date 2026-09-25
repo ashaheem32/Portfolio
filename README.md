@@ -1,62 +1,28 @@
-# Mohammed Shaheem - Portfolio
+# Mohammed Shaheem — Portfolio
 
-A personal portfolio website built with React.js, featuring a typing animation intro, interactive particle portrait, project showcase, and work experience timeline.
+A responsive React portfolio inspired by [Midu Studio](https://midu.design/), with a dark editorial layout, animated ember gradient, large wordmark, and project showcases.
 
-## Tech Stack
-
-- **React.js** - UI framework
-- **Material UI** - Icons and components
-- **React Bootstrap** - Layout and responsive design
-- **React Typist** - Typing animation effect
-- **Canvas API** - Particle portrait animation
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js (v14+)
-- npm or yarn
-
-### Installation
+## Development
 
 ```sh
 npm install --legacy-peer-deps
-```
-
-### Development
-
-```sh
 npm start
 ```
 
-Opens [http://localhost:3000](http://localhost:3000) in your browser.
+The local preview runs at http://localhost:3000.
 
-### Production Build
+## Production
 
 ```sh
 npm run build
 ```
 
-## Project Structure
+Deploy the generated `build/` directory to a static host. `homepage` is set to `.` for portable asset URLs.
 
-```
-src/
-├── components/
-│   ├── About.js            # About me section
-│   ├── Credits.js          # Footer credits
-│   ├── Experience.js       # Work experience section
-│   ├── ExternalLinks.js    # GitHub/external link icons
-│   ├── FadeInSection.js    # Scroll-based fade-in animation
-│   ├── Intro.js            # Hero section with typing effect
-│   ├── JobList.js          # Tabbed job experience list
-│   ├── NavBar.js           # Top navigation bar
-│   ├── ParticlePortrait.js # Canvas particle portrait animation
-│   └── Projects.js         # Project showcase with carousel
-├── styles/                 # Component-specific CSS
-├── App.js                  # Root app component
-└── index.js                # Entry point
-```
+## Content
 
-## License
+`src/data.js` contains the profile, all nine original projects, their links, and the skill groups. About and Outlier experience copy live in `src/components/About.js` and `src/components/JobList.js`. The existing portrait, project images, and résumé remain in `public/assets/`.
 
-All rights reserved. &copy; Mohammed Shaheem
+The site includes a keyboard-accessible navigation menu, expandable project archive, native skill disclosures, reduced-motion support, responsive layouts, and résumé downloads. It uses React and CSS without loading the previous Bootstrap, Material UI, or 3D background in the main application.
+
+All rights reserved. © Mohammed Shaheem.

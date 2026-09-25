@@ -1,44 +1,38 @@
-import React from "react";
-
-// `as` lets callers pick the wrapper element — a plain <div> is invalid inside
-// a <ul>, so list items pass as="li".
-export default function FadeInSection({ as: Wrapper = "div", delay, children }) {
-  const [isVisible, setVisible] = React.useState(false);
-  const domRef = React.useRef();
-
-  React.useEffect(() => {
-    const currentRef = domRef.current;
-    if (!currentRef) {
-      return undefined;
-    }
-
+import React, { useEffect, useRef, useState } from "react";
+export default function FadeInSection({
+  as: Wrapper = "div",
+  delay,
+  className = "",
+  children,
+}) {
+  const [state, setState] = useState("");
+  const ref = useRef(null);
+  useEffect(() => {
+    if (
+      !window.IntersectionObserver ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    )
+      return;
+    const element = ref.current;
+    if (element.getBoundingClientRect().top < window.innerHeight) return;
+    setState("is-pending");
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setVisible(true);
-            observer.unobserve(entry.target);
-          }
-        });
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setState("is-visible");
+          observer.disconnect();
+        }
       },
-      {
-        threshold: 0.18,
-        rootMargin: "0px 0px -10% 0px",
-      }
+      { threshold: 0, rootMargin: "0px 0px -32px 0px" }
     );
-
-    observer.observe(currentRef);
-
-    return () => {
-      observer.disconnect();
-    };
+    observer.observe(element);
+    return () => observer.disconnect();
   }, []);
-
   return (
     <Wrapper
-      className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
-      style={{ transitionDelay: delay || undefined }}
-      ref={domRef}
+      ref={ref}
+      className={`fade-in-section ${state} ${className}`}
+      style={{ transitionDelay: delay }}
     >
       {children}
     </Wrapper>

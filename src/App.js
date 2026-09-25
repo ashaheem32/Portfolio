@@ -1,67 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Intro from "./components/Intro";
-import Experience from "./components/Experience";
 import About from "./components/About";
 import Projects from "./components/Projects";
+import Experience from "./components/Experience";
+import Expertise from "./components/Expertise";
 import Credits from "./components/Credits";
 import NavBar from "./components/NavBar";
-import LegoBackground from "./components/LegoBackground";
 import "./App.css";
 import "./styles/Global.css";
 
-function App() {
-  const [showSplash, setShowSplash] = useState(true);
-  const [fadeSplash, setFadeSplash] = useState(false);
-  const [showMainContent, setShowMainContent] = useState(false);
-
-  useEffect(() => {
-    const fadeTimer = window.setTimeout(() => {
-      setFadeSplash(true);
-    }, 1700);
-
-    const hideTimer = window.setTimeout(() => {
-      setShowSplash(false);
-      setShowMainContent(true);
-    }, 2400);
-
-    return () => {
-      window.clearTimeout(fadeTimer);
-      window.clearTimeout(hideTimer);
-    };
-  }, []);
-
-  useEffect(() => {
-    document.body.style.overflow = showSplash ? "hidden" : "";
-
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [showSplash]);
-
+export default function App() {
   return (
     <div className="App">
-      <LegoBackground />
-      {showSplash && (
-        <div className={`opening-banner ${fadeSplash ? "is-exiting" : ""}`}>
-          <h1 className="opening-banner__name">Mohammed Shaheem</h1>
-        </div>
-      )}
-      <div className={`main-site ${showMainContent ? "is-visible" : ""}`}>
-        {showMainContent && (
-          <>
-            <NavBar></NavBar>
-            <div id="content">
-              <Intro></Intro>
-              <About></About>
-              <Experience></Experience>
-              <Projects></Projects>
-              <Credits></Credits>
-            </div>
-          </>
-        )}
-      </div>
+      <a className="skip-link" href="#main">
+        Skip to content
+      </a>
+      <NavBar />
+      <main id="main">
+        <Intro />
+        <About />
+        <Projects />
+        <Experience />
+        <Expertise />
+      </main>
+      <Credits />
     </div>
   );
 }
-
-export default App;

@@ -1,190 +1,159 @@
-import React from "react";
-import "../styles/Projects.css";
-import FolderOpenRoundedIcon from "@material-ui/icons/FolderOpenRounded";
+import React, { useState } from "react";
 import FadeInSection from "./FadeInSection";
-import Carousel from "react-bootstrap/Carousel";
 import ExternalLinks from "./ExternalLinks";
-
-class Projects extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      expanded: true,
-      activeKey: "1",
-    };
-    this.handleSelect = this.handleSelect.bind(this);
-  }
-  handleSelect(eventKey) {
-    this.setState({
-      activeKey: eventKey,
-    });
-  }
-  render() {
-    const spotlightProjects = {
-      "No Man's Land": {
-        title: "Nearme AI",
-        desc:
-          "AI-driven local search and recommendation system to help users discover nearby places",
-        techStack: "Javascript",
-        link: "https://github.com/ashaheem32/Nearme_Ai.git",
-        open: "https://nearmeai.vercel.app/",
-        image: "/assets/nearmeai.png",
-      },
-      "Chat Seeker": {
-        title: "Chat Seeker",
-        desc:
-          "AI-powered chat analysis dashboard that turns any chat export into deep insights on emotion, vocabulary, conflicts, love languages, and overall communication health.",
-        techStack: "Next.js, FastAPI, Claude AI, pgvector",
-        link: "https://github.com/ashaheem32/Chat_seeker.git",
-        image: "/assets/chatseeker.png",
-      },
-      "JurisGPT": {
-        title: "JurisGPT",
-        desc:
-          "A retrieval-augmented legal research assistant that answers questions on Indian startup and corporate law with citations grounded in the actual statutes and case law it retrieves.",
-        techStack: "Next.js, FastAPI, ChromaDB, RAG",
-        link: "https://github.com/Bruhadev45/Juris-GPT.git",
-        image: "/assets/jurisgpt.svg",
-        // Vector cover art, not a screenshot — must never be cropped.
-        imageContain: true,
-      },
-    };
-    const projects = {
-      "Lead Pilot": {
-        desc:
-          "LeadPilot AI is an AI-powered platform that automates B2B lead generation, enrichment, and outreach using a multi-agent system.",
-        techStack: "React, RAG, Multi-Agent System",
-        link: "https://github.com/ashaheem32/lead-pilot-ai-710837.git",
-        open: "https://lead-pilot-jet.vercel.app/",
-      },
-      "Maternity Weight Prediction": {
-        desc:
-          "Predicting newborn weight using maternal and pregnancy features through data analysis and machine learning.",
-        techStack: "Python, Machine Learning",
-        link: "https://github.com/ashaheem32/Maternity-Weight-Prediction.git",
-        open: "https://github.com/ashaheem32/Maternity-Weight-Prediction.git",
-      },
-      "AI-Based Credit Card Application Approval System": {
-        desc:
-          "To develop a predictive model that automates credit card approval using machine learning techniques.",
-        techStack: "Python, Machine Learning",
-        link:
-          "https://github.com/ashaheem32/AI-Based-Credit-Card-Application-Approval-System.git",
-      },
-      "Utley Architecture":{
-        desc:
-        "A boutique architecture firm specializing in residential and commercial design.",
-        techStack: "Astro,React,Tailwind CSS",
-        link: "https://github.com/ashaheem32/Utley-Architecture.git",
-        open: "utley-architecture.vercel.app",
-      },
-      "AI-Based Hand Gesture Mouse Control Using Computer Vision": {
-        desc:
-          "Developed a real-time AI system using MediaPipe and OpenCV to control the mouse with hand gestures.",
-        techStack: "Python, OpenCV, MediaPipe",
-        link: "https://github.com/ashaheem32/AI-Based-Hand-Gesture-Mouse-Control-Using-Computer-Vision.git",
-        open: "https://github.com/ashaheem32/AI-Based-Hand-Gesture-Mouse-Control-Using-Computer-Vision.git",
-      },
-      "Store Intelligence": {
-        desc:
-          "Real-time retail store intelligence system — an end-to-end pipeline from raw CCTV footage to a live analytics API. Detects visitors, tracks movement, computes conversion rates, and alerts on operational anomalies in real time.",
-        techStack: "Python, YOLOv8, ByteTrack, FastAPI",
-        link: "https://github.com/ashaheem32/Store_Intelligence.git",
-      },
-    };
-
-    return (
-      <div id="projects">
-        <FadeInSection>
-          <div className="section-header ">
-            <span className="section-title">/ pet projects</span>
-          </div>
-          <Carousel>
-            {Object.keys(spotlightProjects).map((key, i) => (
-              <Carousel.Item key={key}>
-                <a
-                  href={spotlightProjects[key]["link"]}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="d-block spotlight-image-link"
-                >
-                  <img
-                    className={`d-block w-100${
-                      spotlightProjects[key]["imageContain"]
-                        ? " spotlight-image--contain"
-                        : ""
-                    }`}
-                    src={spotlightProjects[key]["image"]}
-                    alt={key}
-                  />
-                </a>
-                <div className="caption-bg">
-                  <Carousel.Caption>
-                    <h3>{spotlightProjects[key]["title"]}</h3>
-                    <div className="caption-desc">
-                      {spotlightProjects[key]["desc"]}
-                    </div>
-                    <p className="techStack">
-                      {spotlightProjects[key]["techStack"]}
-                    </p>
-                    <ExternalLinks
-                      githubLink={spotlightProjects[key]["link"]}
-                      openLink={spotlightProjects[key]["open"]}
-                    ></ExternalLinks>
-                  </Carousel.Caption>
-                </div>
-              </Carousel.Item>
-            ))}
-          </Carousel>
-          <div className="project-container">
-            <Carousel
-              className="projects-carousel"
-              interval={null}
-              indicators={false}
-              wrap
-            >
-              {(() => {
-                const keys = Object.keys(projects);
-                const groups = [];
-                for (let g = 0; g < keys.length; g += 3) {
-                  groups.push(keys.slice(g, g + 3));
-                }
-                return groups.map((group, gi) => (
-                  <Carousel.Item key={gi}>
-                    <ul className="projects-grid">
-                      {group.map((key, i) => (
-                        <li className="projects-card" key={i}>
-                          <div className="card-header">
-                            <div className="folder-icon">
-                              <FolderOpenRoundedIcon
-                                style={{ fontSize: 35 }}
-                              ></FolderOpenRoundedIcon>
-                            </div>
-                            <ExternalLinks
-                              githubLink={projects[key]["link"]}
-                              openLink={projects[key]["open"]}
-                            ></ExternalLinks>
-                          </div>
-
-                          <div className="card-title">{key}</div>
-                          <div className="card-desc">
-                            {projects[key]["desc"]}
-                          </div>
-                          <div className="card-tech">
-                            {projects[key]["techStack"]}
-                          </div>
-                        </li>
-                      ))}
-                    </ul>
-                  </Carousel.Item>
-                ));
-              })()}
-            </Carousel>
-          </div>
-        </FadeInSection>
+import Icon from "./Icon";
+import { featuredProjects, otherProjects, profile } from "../data";
+import "../styles/Projects.css";
+export default function Projects() {
+  const [showAll, setShowAll] = useState(false);
+  return (
+    <section
+      id="projects"
+      className="section projects-section"
+      aria-labelledby="projects-heading"
+    >
+      <div className="section-topline">
+        <p className="section-kicker">Selected work</p>
+        <span className="section-index">02 / 05</span>
       </div>
-    );
-  }
+      <FadeInSection className="section-intro">
+        <h2 id="projects-heading" className="section-heading">
+          Built with curiosity.
+          <br />
+          <span className="muted">Made to be useful.</span>
+        </h2>
+        <p>
+          A selection of AI experiments, intelligent tools, and digital
+          experiences I’ve brought to life.
+        </p>
+      </FadeInSection>
+      <div className="featured-projects">
+        {featuredProjects.map((project, index) => (
+          <FadeInSection
+            as="article"
+            className={`featured-project project--${project.theme}`}
+            key={project.title}
+          >
+            <a
+              className="project-visual"
+              href={project.live || project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Explore ${project.title}`}
+            >
+              <div className="project-visual-top">
+                <span>0{index + 1}</span>
+                <span>{project.category}</span>
+                <span className="project-open">
+                  <Icon />
+                </span>
+              </div>
+              <div className="project-image-wrap">
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/${project.image}`}
+                  alt={project.imageAlt}
+                  loading="lazy"
+                  width={
+                    project.theme === "legal"
+                      ? 1200
+                      : project.theme === "chat"
+                      ? 1344
+                      : 1536
+                  }
+                  height={
+                    project.theme === "legal"
+                      ? 600
+                      : project.theme === "chat"
+                      ? 752
+                      : 811
+                  }
+                />
+              </div>
+              {project.theme === "legal" && (
+                <span className="legal-art-title">
+                  JurisGPT<span>Intelligence, grounded in law.</span>
+                </span>
+              )}
+              <span className="project-hover-cta">
+                Explore project <Icon />
+              </span>
+            </a>
+            <div className="project-info">
+              <div>
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+              </div>
+              <div className="project-details">
+                <div className="project-tech">
+                  {project.technologies.map((tool) => (
+                    <span key={tool}>{tool}</span>
+                  ))}
+                </div>
+                <ExternalLinks
+                  githubLink={project.github}
+                  openLink={project.live}
+                  title={project.title}
+                />
+              </div>
+            </div>
+          </FadeInSection>
+        ))}
+      </div>
+      <div className="archive-heading">
+        <div>
+          <p className="section-kicker">The project archive</p>
+          <h3>More things I’ve built.</h3>
+        </div>
+        <span className="archive-count">06 projects</span>
+      </div>
+      <div className="project-archive" id="project-archive">
+        {otherProjects.map((project, index) => (
+          <article
+            className="archive-project"
+            key={project.title}
+            hidden={index > 2 && !showAll}
+          >
+            <div className="archive-project-top">
+              <span className="archive-number">0{index + 4}</span>
+              <span>{project.category}</span>
+              <Icon name="code" />
+            </div>
+            <h3>{project.title}</h3>
+            <p>{project.description}</p>
+            <div className="archive-project-bottom">
+              <div className="project-tech">
+                {project.technologies.map((tool) => (
+                  <span key={tool}>{tool}</span>
+                ))}
+              </div>
+              <ExternalLinks
+                githubLink={project.github}
+                openLink={project.live}
+                title={project.title}
+              />
+            </div>
+          </article>
+        ))}
+      </div>
+      <div className="archive-actions">
+        <button
+          className="button button--outline"
+          onClick={() => setShowAll(!showAll)}
+          aria-expanded={showAll}
+          aria-controls="project-archive"
+        >
+          {showAll ? "Show fewer projects" : "View all 9 projects"}
+          <Icon name={showAll ? "close" : "plus"} />
+        </button>
+        <a
+          className="text-link"
+          href={profile.github}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Explore GitHub <Icon />
+        </a>
+      </div>
+    </section>
+  );
 }
-
-export default Projects;

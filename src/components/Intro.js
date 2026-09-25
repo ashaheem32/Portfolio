@@ -1,60 +1,42 @@
 import React from "react";
-
+import Icon from "./Icon";
+import Wordmark from "./Wordmark";
+import { profile } from "../data";
 import "../styles/Intro.css";
-import Typist from "react-typist";
-import "react-typist/dist/Typist.css";
-import EmailRoundedIcon from "@material-ui/icons/EmailRounded";
-import FadeInSection from "./FadeInSection";
-import JumpyTitle from "./JumpyTitle";
-
-class Intro extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      expanded: true,
-      activeKey: "1",
-      visible: true,
-      typingDone: false,
-    };
-    this.handleSelect = this.handleSelect.bind(this);
-  }
-  handleSelect(eventKey) {
-    this.setState({
-      activeKey: eventKey,
-    });
-  }
-  render() {
-    return (
-      <div id="intro">
-        <div className="intro-block">
-          {!this.state.typingDone ? (
-            <Typist
-              avgTypingDelay={120}
-              onTypingDone={() => this.setState({ typingDone: true })}
-            >
-              <span className="intro-title">
-                {"hi, "}
-                <span className="intro-name">{"Mohammed Shaheem"}</span>
-                {" here."}
-              </span>
-            </Typist>
-          ) : (
-            <JumpyTitle />
-          )}
-          <FadeInSection>
-            <div className="intro-desc">
-            I'm a <b>AI & Machine Learning Engineer</b> focused on LLMs, RLHF, computer vision, and data-driven systems, 
-            with hands-on experience optimizing and evaluating large-scale language models.
-            </div>
-            <a href="mailto:ashaheem32@gmail.com" className="intro-contact">
-              <EmailRoundedIcon></EmailRoundedIcon>
-              {" Say hi!"}
-            </a>
-          </FadeInSection>
+export default function Intro() {
+  return (
+    <section id="intro" className="hero" aria-labelledby="hero-heading">
+      <div className="hero-top">
+        <div className="hero-identity">
+          <span className="status-dot" />
+          Available for my next chapter
+        </div>
+        <div className="hero-introduction">
+          <p className="hero-name">{profile.name}</p>
+          <h1 id="hero-heading">
+            Building intelligent systems for a more human world.
+          </h1>
+          <a className="text-link" href="#projects">
+            Explore my work <Icon />
+          </a>
         </div>
       </div>
-    );
-  }
+      <div className="hero-bottom">
+        <div className="hero-meta">
+          <p>{profile.role}</p>
+          <p className="hero-specialties">
+            LLMs <span>·</span> Computer vision <span>·</span> Data science
+          </p>
+          <a href="#about">
+            Scroll to explore <Icon name="down" />
+          </a>
+        </div>
+        <div className="hero-art">
+          <div className="hero-glow" />
+          <Wordmark id="hero-wordmark-gradient" />
+          <div className="hero-grain" />
+        </div>
+      </div>
+    </section>
+  );
 }
-
-export default Intro;
