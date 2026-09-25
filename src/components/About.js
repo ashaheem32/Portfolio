@@ -1,5 +1,6 @@
 import React from "react";
 import FadeInSection from "./FadeInSection";
+import RevealHeading from "./RevealHeading";
 import Icon from "./Icon";
 import { profile } from "../data";
 import "../styles/About.css";
@@ -14,15 +15,16 @@ export default function About() {
         <p className="section-kicker">A little about me</p>
         <span className="section-index">01 / 05</span>
       </div>
-      <FadeInSection>
-        <h2 id="about-heading" className="section-heading about-heading">
-          Curiosity meets code.
-          <br />
-          <span className="muted">Ideas become</span>
-          <br />
-          real-world intelligence.
-        </h2>
-      </FadeInSection>
+      <RevealHeading
+        id="about-heading"
+        className="section-heading about-heading"
+      >
+        Curiosity meets code.
+        <br />
+        <span className="muted">Ideas become</span>
+        <br />
+        real-world intelligence.
+      </RevealHeading>
       <div className="about-grid">
         <FadeInSection className="portrait-wrap">
           <img
@@ -39,7 +41,7 @@ export default function About() {
         </FadeInSection>
         <FadeInSection className="about-copy">
           <p className="about-lead">
-            Hi, I’m Shaheem.{" "}
+            Hi, I’m Mohammed Shaheem.{" "}
             <span>
               An aspiring AI/ML engineer turning complex problems into
               thoughtful, practical applications.

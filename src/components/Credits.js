@@ -2,6 +2,7 @@ import React from "react";
 import Icon from "./Icon";
 import Wordmark from "./Wordmark";
 import FadeInSection from "./FadeInSection";
+import RevealHeading from "./RevealHeading";
 import { profile } from "../data";
 import "../styles/Credits.css";
 export default function Credits() {
@@ -16,29 +17,32 @@ export default function Credits() {
           <p className="section-kicker">What’s next?</p>
           <span className="section-index">05 / 05</span>
         </div>
-        <FadeInSection className="contact-main">
+        <div className="contact-main">
           <div>
-            <p className="contact-availability">
+            <FadeInSection as="p" className="contact-availability">
               <span className="status-dot" />
               Open to internships & entry-level roles
-            </p>
-            <h2 id="contact-heading">
+            </FadeInSection>
+            <RevealHeading id="contact-heading">
               Let’s build something
               <br />
-              <span>intelligent.</span>
-            </h2>
-            <a className="button" href={`mailto:${profile.email}`}>
+              <span className="muted">intelligent.</span>
+            </RevealHeading>
+            <a
+              className="button fade-in-section"
+              href={`mailto:${profile.email}`}
+            >
               <Icon name="spark" />
               Get in touch <Icon />
             </a>
           </div>
-          <p>
+          <FadeInSection as="p">
             Have an opportunity in AI, Machine Learning, or Data Science?
             <br />
             <br />
             I’d love to hear from you.
-          </p>
-        </FadeInSection>
+          </FadeInSection>
+        </div>
         <div className="footer-links">
           <a className="footer-email" href={`mailto:${profile.email}`}>
             {profile.email}

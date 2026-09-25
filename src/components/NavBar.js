@@ -40,6 +40,7 @@ export default function NavBar() {
       </a>
       <div
         className={`navigation ${open ? "is-open" : ""}`}
+        data-lenis-prevent
         ref={menuRef}
         onBlur={(event) => {
           if (!event.currentTarget.contains(event.relatedTarget))

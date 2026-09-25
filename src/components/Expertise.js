@@ -1,5 +1,6 @@
 import React from "react";
 import FadeInSection from "./FadeInSection";
+import RevealHeading from "./RevealHeading";
 import Icon from "./Icon";
 import { expertise } from "../data";
 import "../styles/Expertise.css";
@@ -26,20 +27,20 @@ export default function Expertise() {
         <span className="section-index">04 / 05</span>
       </div>
       <div className="expertise-layout">
-        <FadeInSection className="expertise-intro">
-          <h2 className="section-heading" id="expertise-heading">
+        <div className="expertise-intro">
+          <RevealHeading className="section-heading" id="expertise-heading">
             The right tools.
             <br />
             <span className="muted">A curious mind.</span>
-          </h2>
-          <p>
+          </RevealHeading>
+          <FadeInSection as="p">
             From evaluating language models to building the applications around
             them. Always learning, always making.
-          </p>
-          <a href="#projects" className="text-link">
+          </FadeInSection>
+          <a href="#projects" className="text-link fade-in-section">
             See them in action <Icon />
           </a>
-        </FadeInSection>
+        </div>
         <div className="expertise-list">
           {expertise.map((item, index) => (
             <details

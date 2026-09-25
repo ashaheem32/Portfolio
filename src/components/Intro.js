@@ -1,6 +1,7 @@
 import React from "react";
 import Icon from "./Icon";
 import Wordmark from "./Wordmark";
+import RevealHeading from "./RevealHeading";
 import { profile } from "../data";
 import "../styles/Intro.css";
 export default function Intro() {
@@ -13,9 +14,9 @@ export default function Intro() {
         </div>
         <div className="hero-introduction">
           <p className="hero-name">{profile.name}</p>
-          <h1 id="hero-heading">
+          <RevealHeading as="h1" id="hero-heading">
             Building intelligent systems for a more human world.
-          </h1>
+          </RevealHeading>
           <a className="text-link" href="#projects">
             Explore my work <Icon />
           </a>

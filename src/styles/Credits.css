@@ -30,7 +30,7 @@
   line-height: 1.02;
   letter-spacing: -0.065em;
 }
-.contact-main h2 > span {
+.contact-main h2 .muted {
   color: #a09b93;
 }
 .contact-main .button {

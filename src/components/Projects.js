@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import FadeInSection from "./FadeInSection";
+import RevealHeading from "./RevealHeading";
 import ExternalLinks from "./ExternalLinks";
 import Icon from "./Icon";
 import { featuredProjects, otherProjects, profile } from "../data";
@@ -16,26 +17,25 @@ export default function Projects() {
         <p className="section-kicker">Selected work</p>
         <span className="section-index">02 / 05</span>
       </div>
-      <FadeInSection className="section-intro">
-        <h2 id="projects-heading" className="section-heading">
+      <div className="section-intro">
+        <RevealHeading id="projects-heading" className="section-heading">
           Built with curiosity.
           <br />
           <span className="muted">Made to be useful.</span>
-        </h2>
-        <p>
+        </RevealHeading>
+        <FadeInSection as="p">
           A selection of AI experiments, intelligent tools, and digital
           experiences I’ve brought to life.
-        </p>
-      </FadeInSection>
+        </FadeInSection>
+      </div>
       <div className="featured-projects">
         {featuredProjects.map((project, index) => (
-          <FadeInSection
-            as="article"
+          <article
             className={`featured-project project--${project.theme}`}
             key={project.title}
           >
             <a
-              className="project-visual"
+              className="project-visual fade-in-section"
               href={project.live || project.github}
               target="_blank"
               rel="noopener noreferrer"
@@ -80,10 +80,10 @@ export default function Projects() {
             </a>
             <div className="project-info">
               <div>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
+                <RevealHeading as="h3">{project.title}</RevealHeading>
+                <FadeInSection as="p">{project.description}</FadeInSection>
               </div>
-              <div className="project-details">
+              <FadeInSection className="project-details">
                 <div className="project-tech">
                   {project.technologies.map((tool) => (
                     <span key={tool}>{tool}</span>
@@ -94,15 +94,15 @@ export default function Projects() {
                   openLink={project.live}
                   title={project.title}
                 />
-              </div>
+              </FadeInSection>
             </div>
-          </FadeInSection>
+          </article>
         ))}
       </div>
       <div className="archive-heading">
         <div>
           <p className="section-kicker">The project archive</p>
-          <h3>More things I’ve built.</h3>
+          <RevealHeading as="h3">More things I’ve built.</RevealHeading>
         </div>
         <span className="archive-count">06 projects</span>
       </div>
