@@ -85,7 +85,7 @@ export default function NavBar() {
               LinkedIn <Icon />
             </a>
             <a href={profile.resume} download>
-              Résumé <Icon name="download" />
+              Resume <Icon name="download" />
             </a>
           </div>
         </nav>

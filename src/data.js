@@ -1,4 +1,4 @@
-// Portfolio content retained from the original site.
+// Portfolio profile, experience, projects, and skills.
 export const profile = {
   name: "Mohammed Shaheem Abdul Salam",
   shortName: "Mohammed Shaheem",
@@ -10,14 +10,63 @@ export const profile = {
   portrait: `${process.env.PUBLIC_URL}/assets/shaheem.png`,
 };
 
+// Experience aligned with LinkedIn and the supplied UAE résumé.
+export const experience = [
+  {
+    id: "atyuttama",
+    company: "Atyuttama Enterprises LLP",
+    role: "AI Engineer",
+    employmentType: "Full-time",
+    location: "Hyderabad, Telangana, India · Hybrid",
+    startDate: "2025-08",
+    startLabel: "Aug 2025",
+    endDate: "2026-09",
+    endLabel: "Sep 2026",
+    icon: "code",
+    headline: "AI engineering with Python, RAG, and NLP.",
+    highlights: [
+      "Contributed to AI engineering projects using Python, retrieval-augmented generation (RAG), and natural language processing (NLP).",
+      "Collaborated with colleagues to understand requirements, solve technical problems, and adapt to changing tools and project needs.",
+    ],
+    skills: [
+      "Python",
+      "Artificial Intelligence",
+      "Retrieval-Augmented Generation",
+      "Natural Language Processing",
+    ],
+  },
+  {
+    id: "outlier",
+    company: "Outlier",
+    role: "AI Trainer | LLM Evaluation & RLHF",
+    employmentType: "Freelance",
+    location: "Remote",
+    startDate: "2024-08",
+    startLabel: "Aug 2024",
+    endDate: "2025-12",
+    endLabel: "Dec 2025",
+    icon: "spark",
+    headline: "Turning human insight into stronger model performance.",
+    highlights: [
+      "Completed 1,000+ LLM evaluation and reinforcement learning from human feedback (RLHF) tasks across code generation, reasoning, and prompt optimization.",
+      "Reviewed Python and backend engineering outputs for correctness, groundedness, and code quality using structured evaluation criteria.",
+      "Maintained consistent 4–5 star quality ratings across AI and software engineering evaluation projects.",
+    ],
+    stats: [
+      { value: "1,000", suffix: "+", label: "LLM evaluation & RLHF tasks" },
+      { value: "4–5", suffix: "★", label: "Consistent quality ratings" },
+    ],
+  },
+];
+
 export const featuredProjects = [
   {
     title: "Nearme AI",
     description:
       "AI-driven local search and recommendation system to help users discover nearby places",
-    technologies: ["Javascript"],
+    technologies: ["JavaScript"],
     github: "https://github.com/ashaheem32/Nearme_Ai.git",
-    live: "https://nearmeai.vercel.app/",
+    live: "https://www.nearmeai.app/",
     image: "nearmeai.png",
     category: "AI · Local discovery",
     theme: "nearby",
@@ -55,7 +104,7 @@ export const otherProjects = [
     description:
       "LeadPilot AI is an AI-powered platform that automates B2B lead generation, enrichment, and outreach using a multi-agent system.",
     technologies: ["React", "RAG", "Multi-Agent System"],
-    github: "https://github.com/ashaheem32/lead-pilot-ai-710837.git",
+    github: "https://github.com/ashaheem32/Lead_Pilot_AI.git",
     live: "https://lead-pilot-jet.vercel.app/",
     category: "AI automation",
   },

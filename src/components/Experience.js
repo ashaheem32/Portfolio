@@ -16,13 +16,13 @@ export default function Experience() {
       </div>
       <div className="section-intro">
         <RevealHeading className="section-heading" id="experience-heading">
-          Human feedback.
+          Applied AI.
           <br />
-          <span className="muted">Better intelligence.</span>
+          <span className="muted">Human insight.</span>
         </RevealHeading>
         <FadeInSection as="p">
-          Hands-on experience evaluating and improving the large language models
-          shaping how we work.
+          Experience in AI engineering, retrieval-augmented generation, and
+          evaluating language models through human feedback.
         </FadeInSection>
       </div>
       <JobList />

@@ -43,22 +43,21 @@ export default function About() {
           <p className="about-lead">
             Hi, I’m Mohammed Shaheem.{" "}
             <span>
-              An aspiring AI/ML engineer turning complex problems into
-              thoughtful, practical applications.
+              An AI engineer turning complex problems into thoughtful, practical
+              applications.
             </span>
           </p>
           <p>
-            I focus on LLMs, RLHF, computer vision, and data science, with
-            hands-on experience optimizing and evaluating large-scale language
-            models. As a Freelance Coding Expert at Outlier AI, my work has
-            centered on prompt optimization, algorithm design, and model
-            behavior analysis.
+            I focus on LLMs, RAG, computer vision, and data science. My
+            experience includes a full-time AI Engineer role at Atyuttama
+            Enterprises LLP, working with Python, RAG, and natural language
+            processing, and 1,000+ freelance LLM evaluation and RLHF tasks at
+            Outlier.
           </p>
           <p>
-            Skilled in Python, SQL, TensorFlow, Scikit-learn, and LLM frameworks
-            like the OpenAI API and LangChain, I have a track record of building
-            real-world AI applications. I’m seeking internship or entry-level
-            roles in AI, Machine Learning, or Data Science.
+            I work with Python, SQL, FastAPI, and LangChain to build
+            citation-grounded AI applications and vector-search pipelines. I’m
+            seeking entry-level roles in AI, Machine Learning, or Data Science.
           </p>
           <div className="about-technologies">
             <span>Recently working with</span>
@@ -79,7 +78,7 @@ export default function About() {
             href={profile.resume}
             download="Mohammed_Shaheem_CV.pdf"
           >
-            Download my résumé <Icon name="download" />
+            Download my resume <Icon name="download" />
           </a>
         </FadeInSection>
       </div>

@@ -21,7 +21,7 @@ export default function Credits() {
           <div>
             <FadeInSection as="p" className="contact-availability">
               <span className="status-dot" />
-              Open to internships & entry-level roles
+              Open to entry-level roles
             </FadeInSection>
             <RevealHeading id="contact-heading">
               Let’s build something
@@ -60,7 +60,7 @@ export default function Credits() {
               LinkedIn <Icon />
             </a>
             <a href={profile.resume} download="Mohammed_Shaheem_CV.pdf">
-              Résumé <Icon name="download" />
+              Resume <Icon name="download" />
             </a>
           </div>
         </div>

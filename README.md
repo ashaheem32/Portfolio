@@ -23,7 +23,7 @@ Deploy the generated `build/` directory to a static host. `homepage` is set to `
 
 ## Content
 
-`src/data.js` contains the profile, all nine original projects, their links, and the skill groups. About and Outlier experience copy live in `src/components/About.js` and `src/components/JobList.js`. The existing portrait, project images, and résumé remain in `public/assets/`.
+`src/data.js` contains the profile, LinkedIn-aligned experience, all nine original projects, their links, and the skill groups. Experience cards are rendered by `src/components/JobList.js`; About copy lives in `src/components/About.js`. The existing portrait, project images, and résumé remain in `public/assets/`.
 
 The site includes a keyboard-accessible navigation menu, expandable project archive, native skill disclosures, reduced-motion support, responsive layouts, and résumé downloads. The UI uses React, plain CSS, and Lenis for smooth scrolling.
 

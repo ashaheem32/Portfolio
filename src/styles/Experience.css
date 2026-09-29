@@ -1,6 +1,10 @@
 .experience-section {
   border-top: 1px solid var(--line);
 }
+.experience-list {
+  display: grid;
+  gap: 24px;
+}
 .experience-panel {
   display: grid;
   grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
@@ -10,7 +14,7 @@
   border: 1px solid #272724;
   border-radius: 8px;
 }
-.outlier-mark {
+.experience-mark {
   display: grid;
   place-items: center;
   width: 60px;
@@ -20,7 +24,7 @@
   color: #e9efde;
   background: #303a28;
 }
-.outlier-mark .icon {
+.experience-mark .icon {
   width: 32px;
   height: 32px;
 }
@@ -34,18 +38,37 @@
   font-size: 19px;
   margin-bottom: 7px;
 }
-.experience-role > span:not(.outlier-mark) {
+.experience-role > span:not(.experience-mark) {
   display: block;
   font-size: 13px;
   color: var(--muted);
+  line-height: 1.6;
 }
-.experience-role time {
-  display: block;
+.experience-dates {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--muted);
   margin-top: 34px;
+}
+.experience-skills {
+  margin-top: 30px;
+  padding-top: 28px;
+  border-top: 1px solid #353531;
+}
+.experience-skills > span {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.experience-skills > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.experience-skills .tech-pill {
+  white-space: normal;
 }
 .experience-details > p {
   font-size: clamp(24px, 2.7vw, 38px);
@@ -105,14 +128,14 @@
     gap: 38px;
     padding: clamp(22px, 5vw, 40px);
   }
-  .outlier-mark {
+  .experience-mark {
     margin-bottom: 26px;
   }
   .experience-role h3 {
     font-size: 34px;
     margin-bottom: 15px;
   }
-  .experience-role time {
+  .experience-dates {
     margin-top: 22px;
   }
   .experience-details > p {
