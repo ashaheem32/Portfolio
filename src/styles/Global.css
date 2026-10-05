@@ -133,9 +133,6 @@ html.lenis {
 .hero-art {
   --reveal-delay: 260ms;
 }
-[data-motion="enabled"] .project-image-wrap img {
-  transform: translate3d(0, var(--scroll-drift, 0px), 0);
-}
 @media (max-width: 700px) {
   .scroll-reveal {
     --reveal-distance: 12px;

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img" aria-label="JurisGPT — citation-grounded legal research assistant">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -37.5 1200 675" width="1200" height="675" role="img" aria-label="JurisGPT — citation-grounded legal research assistant">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#0b1830"/>
@@ -29,8 +29,8 @@
     </pattern>
   </defs>
 
-  <rect width="1200" height="600" fill="url(#bg)"/>
-  <rect width="1200" height="600" fill="url(#studs)" opacity="0.5"/>
+  <rect y="-37.5" width="1200" height="675" fill="url(#bg)"/>
+  <rect y="-37.5" width="1200" height="675" fill="url(#studs)" opacity="0.5"/>
   <ellipse cx="200" cy="320" rx="300" ry="270" fill="url(#halo)"/>
 
   <!-- Scales of justice. Kept left of x=300 so the centred slide caption

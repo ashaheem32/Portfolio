@@ -10,23 +10,35 @@
   position: relative;
   overflow: hidden;
   border-radius: 8px;
-  padding: 26px 32px 50px;
+  aspect-ratio: 16 / 9;
   background: #292318;
 }
 .project-visual-top {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 22px;
+  color: #ffffffe0;
+}
+.project-info .project-label {
   display: flex;
   align-items: center;
-  gap: 22px;
-  color: #ffffffc9;
+  gap: 14px;
+  color: #aaa9a4;
   font-size: 11px;
-  margin-bottom: 34px;
+  margin-bottom: 14px;
 }
-.project-visual-top > span:first-child {
+.project-info .project-label > span:first-child {
   opacity: 0.65;
   font-variant-numeric: tabular-nums;
 }
 .project-open {
-  margin-left: auto;
+  background: #0b0b0bb8;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: 1px solid #ffffff50;
   border-radius: 50%;
   display: grid;
@@ -41,24 +53,21 @@
   background: var(--text);
 }
 .project-image-wrap {
-  margin: 0 auto;
-  max-width: 1000px;
-  width: 82%;
-  transform: perspective(1400px) rotateX(3deg);
+  position: absolute;
+  inset: 0;
   transition: transform 600ms cubic-bezier(0.2, 0.7, 0.3, 1);
 }
 .project-image-wrap img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
-  object-fit: contain;
-  border-radius: 7px;
-  box-shadow: 0 25px 65px #0005;
+  object-fit: cover;
 }
 .project-visual:hover .project-image-wrap {
-  transform: perspective(1400px) rotateX(0) translateY(-5px) scale(1.02);
+  transform: scale(1.03);
 }
 .project--nearby .project-visual {
+  aspect-ratio: 16 / 10;
   background: radial-gradient(
     ellipse at 50% 65%,
     #b89658,
@@ -82,15 +91,11 @@
     #142321
   );
 }
-.project--legal .project-image-wrap {
-  width: 86%;
-  padding-top: 4%;
-}
 .legal-art-title {
   position: absolute;
-  left: 42%;
-  top: 38%;
-  font-size: clamp(28px, 5vw, 75px);
+  left: 39%;
+  top: 29%;
+  font-size: clamp(22px, 6vw, 90px);
   letter-spacing: -0.06em;
   font-weight: 500;
   pointer-events: none;
@@ -105,6 +110,7 @@
 }
 .project-hover-cta {
   position: absolute;
+  z-index: 2;
   left: 50%;
   top: 52%;
   transform: translate(-50%, -30%);
@@ -262,6 +268,33 @@
   gap: 32px;
   margin-top: 36px;
 }
+/* Sticky stack: each featured project pins, and the next slides over it. */
+@media (min-width: 901px) {
+  [data-motion="enabled"] .featured-projects {
+    display: block;
+  }
+  [data-motion="enabled"] .featured-project {
+    --stack-ratio: 16 / 9;
+    position: sticky;
+    top: calc(92px + var(--stack-index, 0) * 14px);
+    width: min(
+      100%,
+      max(560px, calc((100vh - 300px) * var(--stack-ratio)))
+    );
+    margin: 90px auto 0;
+    padding-bottom: 24px;
+    background: var(--background);
+    transform: scale(calc(1 - var(--stack-progress, 0) * 0.05));
+    transform-origin: 50% 0;
+    filter: brightness(calc(1 - var(--stack-progress, 0) * 0.55));
+  }
+  [data-motion="enabled"] .featured-project.project--nearby {
+    --stack-ratio: 16 / 10;
+  }
+  [data-motion="enabled"] .featured-project:first-child {
+    margin-top: 0;
+  }
+}
 @media (max-width: 1100px) {
   .project-archive {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -276,18 +309,15 @@
     align-items: flex-start;
     gap: 12px;
   }
-  .project-image-wrap {
-    width: 92%;
-  }
 }
 @media (max-width: 600px) {
-  .project-visual {
-    padding: 14px 12px 20px;
-  }
   .project-visual-top {
+    padding: 12px;
+  }
+  .project-info .project-label {
     font-size: 10px;
-    margin-bottom: 18px;
     gap: 10px;
+    margin-bottom: 10px;
   }
   .project-open {
     height: 28px;
@@ -295,21 +325,6 @@
   }
   .project-open .icon {
     width: 14px;
-  }
-  .project-image-wrap {
-    width: 100%;
-  }
-  .project--legal .project-image-wrap {
-    width: 100%;
-    padding-top: 0;
-  }
-  .project-image-wrap img {
-    border-radius: 3px;
-  }
-  .legal-art-title {
-    left: 39%;
-    top: 45%;
-    font-size: clamp(22px, 6vw, 40px);
   }
   .legal-art-title > span {
     margin-top: 7px;

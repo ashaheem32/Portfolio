@@ -23,8 +23,8 @@ export default function App() {
       <main id="main">
         <Intro />
         <About />
-        <Projects />
         <Experience />
+        <Projects />
         <Expertise />
       </main>
       <Credits />

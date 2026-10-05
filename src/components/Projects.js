@@ -15,7 +15,7 @@ export default function Projects() {
     >
       <div className="section-topline">
         <p className="section-kicker">Selected work</p>
-        <span className="section-index">02 / 05</span>
+        <span className="section-index">03 / 05</span>
       </div>
       <div className="section-intro">
         <RevealHeading id="projects-heading" className="section-heading">
@@ -33,6 +33,7 @@ export default function Projects() {
           <article
             className={`featured-project project--${project.theme}`}
             key={project.title}
+            style={{ "--stack-index": index }}
           >
             <a
               className="project-visual fade-in-section"
@@ -42,8 +43,6 @@ export default function Projects() {
               aria-label={`Explore ${project.title}`}
             >
               <div className="project-visual-top">
-                <span>0{index + 1}</span>
-                <span>{project.category}</span>
                 <span className="project-open">
                   <Icon />
                 </span>
@@ -62,10 +61,10 @@ export default function Projects() {
                   }
                   height={
                     project.theme === "legal"
-                      ? 600
+                      ? 675
                       : project.theme === "chat"
                       ? 752
-                      : 811
+                      : 1024
                   }
                 />
               </div>
@@ -80,6 +79,10 @@ export default function Projects() {
             </a>
             <div className="project-info">
               <div>
+                <p className="project-label">
+                  <span>0{index + 1}</span>
+                  <span>{project.category}</span>
+                </p>
                 <RevealHeading as="h3">{project.title}</RevealHeading>
                 <FadeInSection as="p">{project.description}</FadeInSection>
               </div>

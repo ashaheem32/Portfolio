@@ -33,6 +33,8 @@ export default function useScrollMotion(rootRef) {
     const compact = window.matchMedia("(max-width: 700px)");
     const elements = Array.from(root.querySelectorAll(revealSelector));
     const images = Array.from(root.querySelectorAll(".project-image-wrap img"));
+    const cards = Array.from(root.querySelectorAll(".featured-project"));
+    const stacked = window.matchMedia("(min-width: 901px)");
     const seen = new WeakSet();
     let lenis;
     let observer;
@@ -78,6 +80,27 @@ export default function useScrollMotion(rootRef) {
         image.style.setProperty(
           "--scroll-drift",
           `${(0.5 - progress) * distance}px`
+        );
+      });
+      updateStack();
+    };
+
+    // How far each pinned project card is covered by the one sliding over it.
+    const updateStack = () => {
+      if (!stacked.matches) {
+        cards.forEach((card) => card.style.removeProperty("--stack-progress"));
+        return;
+      }
+      const tops = cards.map((card) => card.getBoundingClientRect().top);
+      cards.forEach((card, index) => {
+        const height = card.offsetHeight;
+        const covered =
+          index < cards.length - 1 && height
+            ? (tops[index] + height - tops[index + 1]) / height
+            : 0;
+        card.style.setProperty(
+          "--stack-progress",
+          Math.max(0, Math.min(1, covered)).toFixed(3)
         );
       });
     };
@@ -168,6 +191,7 @@ export default function useScrollMotion(rootRef) {
         root.dataset.motion = "reduced";
         elements.forEach((element) => reveal(element, true));
         images.forEach((image) => image.style.removeProperty("--scroll-drift"));
+        cards.forEach((card) => card.style.removeProperty("--stack-progress"));
         return;
       }
 
@@ -236,6 +260,7 @@ export default function useScrollMotion(rootRef) {
         )
       );
       images.forEach((image) => image.style.removeProperty("--scroll-drift"));
+      cards.forEach((card) => card.style.removeProperty("--stack-progress"));
       delete root.dataset.motion;
     };
   }, [rootRef]);

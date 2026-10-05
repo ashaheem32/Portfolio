@@ -12,7 +12,7 @@ export default function Experience() {
     >
       <div className="section-topline">
         <p className="section-kicker">Experience</p>
-        <span className="section-index">03 / 05</span>
+        <span className="section-index">02 / 05</span>
       </div>
       <div className="section-intro">
         <RevealHeading className="section-heading" id="experience-heading">

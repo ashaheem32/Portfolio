@@ -5,8 +5,8 @@ import "../styles/NavBar.css";
 const links = [
   ["Home", "intro"],
   ["About", "about"],
-  ["Projects", "projects"],
   ["Experience", "experience"],
+  ["Projects", "projects"],
   ["Expertise", "expertise"],
   ["Contact", "contact"],
 ];

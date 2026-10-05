@@ -7,7 +7,7 @@ export const profile = {
   github: "https://github.com/ashaheem32",
   linkedin: "https://www.linkedin.com/in/shaheem32",
   resume: `${process.env.PUBLIC_URL}/assets/Mohammed_Shaheem_CV.pdf`,
-  portrait: `${process.env.PUBLIC_URL}/assets/shaheem.png`,
+  portrait: `${process.env.PUBLIC_URL}/assets/pro_imgg.png`,
 };
 
 // Experience aligned with LinkedIn and the supplied UAE résumé.
@@ -25,8 +25,9 @@ export const experience = [
     icon: "code",
     headline: "AI engineering with Python, RAG, and NLP.",
     highlights: [
-      "Contributed to AI engineering projects using Python, retrieval-augmented generation (RAG), and natural language processing (NLP).",
-      "Collaborated with colleagues to understand requirements, solve technical problems, and adapt to changing tools and project needs.",
+      "Developed conversational AI workflows, including agent prompts, intent handling, fallback responses, and human handoff.",
+      "Built retrieval-augmented generation (RAG) workflows to ground voice agent responses in business documents and website content.",
+      "Integrated AI agents with APIs and business tools for appointment scheduling, lead capture, and call follow-up.",
     ],
     skills: [
       "Python",
@@ -44,7 +45,7 @@ export const experience = [
     startDate: "2024-08",
     startLabel: "Aug 2024",
     endDate: "2025-12",
-    endLabel: "Dec 2025",
+    endLabel: "Aug 2025",
     icon: "spark",
     headline: "Turning human insight into stronger model performance.",
     highlights: [
@@ -67,7 +68,7 @@ export const featuredProjects = [
     technologies: ["JavaScript"],
     github: "https://github.com/ashaheem32/Nearme_Ai.git",
     live: "https://www.nearmeai.app/",
-    image: "nearmeai.png",
+    image: "nearmeai1.png",
     category: "AI · Local discovery",
     theme: "nearby",
     imageAlt: "Nearme AI local discovery concept with a map and nearby places",
