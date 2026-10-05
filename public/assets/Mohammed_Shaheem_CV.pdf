@@ -16,7 +16,7 @@ endobj
 endobj
 3 0 obj
 <<
-/Annots [ 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R ]
+/Annots [ 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 28 0 R ]
 /Contents 27 0 R
 /MediaBox [ 0 0 595.2756 841.8898 ]
 /Parent 2 0 R
@@ -90,7 +90,7 @@ endobj
 /URI (https\072\057\057github\056com\057ashaheem32\057Chat\137seeker)
 >>
 /Border [ 0 0 0 ]
-/Rect [ 210.3262 254.8898 226.625 266.8898 ]
+/Rect [ 210.3262 216.8898 226.625 228.8898 ]
 /Subtype /Link
 /Type /Annot
 >>
@@ -103,7 +103,7 @@ endobj
 /URI (https\072\057\057catalog\055education\056oracle\056com\057ords\057certview\057sharebadge\077id\07549326298FA6BA2B68971241E87E69EEACCB151E9B2320EB35069EF2A461488E0)
 >>
 /Border [ 0 0 0 ]
-/Rect [ 260.3252 112.68976 276.624 124.6898 ]
+/Rect [ 260.3252 74.68976 276.624 86.6898 ]
 /Subtype /Link
 /Type /Annot
 >>
@@ -116,14 +116,14 @@ endobj
 /URI (https\072\057\057catalog\055education\056oracle\056com\057ords\057certview\057sharebadge\077id\07592DF244A3E53B8B615766FC3E0CB04F55014701D352EC1DFB3E3BAFD308FDFFC)
 >>
 /Border [ 0 0 0 ]
-/Rect [ 253.2646 99.48976 269.5635 111.48976 ]
+/Rect [ 253.2646 61.48976 269.5635 73.48976 ]
 /Subtype /Link
 /Type /Annot
 >>
 endobj
 11 0 obj
 <<
-/Length 9935
+/Length 10166
 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
@@ -149,7 +149,7 @@ q
 .019608 .388235 .756863 RG
 n 107.9449 1.95 m 210.0104 1.95 l S
 n 264.0582 1.95 m 321.6705 1.95 l S
-BT 1 0 0 1 0 3.2 Tm 74.31699 0 Td 13.2 TL 0 0 0 rg /F3+0 10 Tf 13.2 TL (GitHub: ) Tj .019608 .388235 .756863 rg (github.com/ashaheem32) Tj 0 0 0 rg (  ) Tj (|) Tj (  Portfolio: ) Tj .019608 .388235 .756863 rg (shaheeem.me) Tj 0 0 0 rg (  ) Tj (|) Tj (  Mobile: +971558289449) Tj T* -74.31699 0 Td ET
+BT 1 0 0 1 0 3.2 Tm 74.31699 0 Td 13.2 TL 0 0 0 rg /F3+0 10 Tf 13.2 TL (GitHub: ) Tj .019608 .388235 .756863 rg (github.com/ashaheem32) Tj 0 0 0 rg (  ) Tj (|) Tj (  Portfolio: ) Tj .019608 .388235 .756863 rg (shaheeem.me) Tj 0 0 0 rg (  ) Tj (|) Tj (  Mobile: +971588076040) Tj T* -74.31699 0 Td ET
 Q
 Q
 q
@@ -172,7 +172,7 @@ q
 1 0 0 1 42 676.1898 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 39.6 Tm /F3+0 10 Tf 12.4 TL (AI Engineer specializing in production retrieval-augmented generation \(RAG\) and LLM systems. Published IEEE researcher) Tj T* (\(2026\) \001 built a citation-grounded legal assistant that raised citation accuracy from 42% to 87%, cutting hallucination by 79%.) Tj T* (Shipped end-to-end AI products spanning vector-search pipelines \(pgvector, ChromaDB\), real-time computer-vision analytics) Tj T* (\(YOLOv8\), and FastAPI backends, backed by 1,000+ LLM evaluation and RLHF tasks for frontier-model training.) Tj T* ET
+BT 1 0 0 1 0 39.6 Tm /F3+0 10 Tf 12.4 TL (AI Engineer with full-time experience at Atyuttama Enterprises LLP, focused on Python, retrieval-augmented generation) Tj T* (\(RAG\), and NLP. Built citation-grounded LLM applications and vector-search pipelines with FastAPI, pgvector, and ChromaDB.) Tj T* (Developed JurisGPT, accepted for IEEE publication, achieving 87% citation accuracy and reducing hallucination by 79%.) Tj T* (Completed 1,000+ LLM evaluation and RLHF tasks at Outlier AI, assessing model correctness, groundedness, and code quality.) Tj T* ET
 Q
 Q
 q
@@ -205,30 +205,38 @@ BT 1 0 0 1 42.00000 625.58980 Tm /F4+0 10 Tf (Full-time | Hyderabad, Telangana, 
 Q
 q
 0 0 0 rg
-BT 1 0 0 1 48 612.38980 Tm /F1 10 Tf (\177) Tj ET
+BT 1 0 0 1 48.00000 612.38980 Tm /F1 10 Tf () Tj ET
 Q
 q
 0 0 0 rg
-BT 1 0 0 1 59.00000 612.38980 Tm /F3+0 10 Tf (Contributed to AI engineering projects using Python, retrieval-augmented generation \(RAG\), and natural language) Tj ET
+BT 1 0 0 1 59.00000 612.38980 Tm /F3+0 10 Tf (Developed conversational AI workflows, including agent prompts, intent handling, fallback responses, and human) Tj ET
 Q
 q
 0 0 0 rg
-BT 1 0 0 1 59.00000 599.98980 Tm /F3+0 10 Tf (processing \(NLP\).) Tj ET
+BT 1 0 0 1 59.00000 599.98980 Tm /F3+0 10 Tf (handoff.) Tj ET
 Q
 q
 0 0 0 rg
-BT 1 0 0 1 48 587.58980 Tm /F1 10 Tf (\177) Tj ET
+BT 1 0 0 1 48.00000 587.58980 Tm /F1 10 Tf () Tj ET
 Q
 q
 0 0 0 rg
-BT 1 0 0 1 59.00000 587.58980 Tm /F3+0 10 Tf (Collaborated with colleagues to understand requirements, solve technical problems, and adapt to changing tools and) Tj ET
+BT 1 0 0 1 59.00000 587.58980 Tm /F3+0 10 Tf (Built retrieval-augmented generation \(RAG\) workflows to ground voice agent responses in business documents and) Tj ET
 Q
 q
 0 0 0 rg
-BT 1 0 0 1 59.00000 575.18980 Tm /F3+0 10 Tf (project needs.) Tj ET
+BT 1 0 0 1 59.00000 575.18980 Tm /F3+0 10 Tf (website content.) Tj ET
 Q
 q
-1 0 0 1 36 556.38980 cm
+0 0 0 rg
+BT 1 0 0 1 48.00000 562.78980 Tm /F1 10 Tf () Tj ET
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 59.00000 562.78980 Tm /F3+0 10 Tf (Integrated AI agents with APIs and business tools for appointment scheduling, lead capture, and call follow-up.) Tj ET
+Q
+q
+1 0 0 1 36 543.18980 cm
 q
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
@@ -242,7 +250,7 @@ q
 1 0 0 1 433.0158 0 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 2.4 Tm 4 0 Td /F2+0 10 Tf 12.4 TL (Aug 2024 \002 Dec 2025) Tj T* -4 0 Td ET
+BT 1 0 0 1 0 2.4 Tm 4 0 Td /F2+0 10 Tf 12.4 TL (Aug 2024 \002 Aug 2025) Tj T* -4 0 Td ET
 Q
 Q
 q
@@ -250,7 +258,7 @@ Q
 Q
 Q
 q
-1 0 0 1 42 518.38980 cm
+1 0 0 1 42 505.18980 cm
 q
 BT 1 0 0 1 6 27.2 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
 0 0 0 rg
@@ -258,7 +266,7 @@ BT 1 0 0 1 17 27.2 Tm /F3+0 10 Tf 12.4 TL (Completed 1,000+ LLM evaluation and R
 Q
 Q
 q
-1 0 0 1 42 492.78980 cm
+1 0 0 1 42 479.58980 cm
 q
 BT 1 0 0 1 6 14.8 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
 0 0 0 rg
@@ -266,14 +274,14 @@ BT 1 0 0 1 17 14.8 Tm /F3+0 10 Tf 12.4 TL (Maintained a consistent 4\0025 star q
 Q
 Q
 q
-1 0 0 1 42 472.28980 cm
+1 0 0 1 42 459.08980 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F2+0 10.5 Tf 13 TL (TECHNICAL SKILLS) Tj T* ET
 Q
 Q
 q
-1 0 0 1 42 469.58980 cm
+1 0 0 1 42 456.38980 cm
 q
 .9 w
 1 J
@@ -282,44 +290,44 @@ n 0 0 m 511.2756 0 l S
 Q
 Q
 q
-1 0 0 1 42 451.88980 cm
+1 0 0 1 42 438.68980 cm
 q
 BT 1 0 0 1 0 3.2 Tm 13.2 TL 0 0 0 rg /F2+0 10 Tf 13.2 TL (Programming:) Tj /F3+0 10 Tf 13.2 TL ( Python, SQL, TypeScript, JavaScript) Tj T* ET
 Q
 Q
 q
-1 0 0 1 42 425.48980 cm
+1 0 0 1 42 412.28980 cm
 q
 BT 1 0 0 1 0 16.4 Tm 13.2 TL 0 0 0 rg /F2+0 10 Tf 13.2 TL (LLM Systems:) Tj /F3+0 10 Tf 13.2 TL ( RAG pipelines, LangChain, vector databases \(pgvector, ChromaDB\), embeddings, OpenAI/Claude APIs, agentic) Tj T* (workflows, LLM evaluation & RLHF) Tj T* ET
 Q
 Q
 q
-1 0 0 1 42 412.28980 cm
+1 0 0 1 42 399.08980 cm
 q
 BT 1 0 0 1 0 3.2 Tm 13.2 TL 0 0 0 rg /F2+0 10 Tf 13.2 TL (ML & Computer Vision:) Tj /F3+0 10 Tf 13.2 TL ( PyTorch, Scikit-learn, OpenCV, YOLOv8, ByteTrack, MediaPipe, Pandas, NumPy) Tj T* ET
 Q
 Q
 q
-1 0 0 1 42 399.08980 cm
+1 0 0 1 42 385.88980 cm
 q
 BT 1 0 0 1 0 3.2 Tm 13.2 TL 0 0 0 rg /F2+0 10 Tf 13.2 TL (Backend & Infrastructure:) Tj /F3+0 10 Tf 13.2 TL ( FastAPI, RESTful APIs, Node.js, PostgreSQL, SQLite, Docker, AWS, Supabase, Pytest, Git/GitHub) Tj T* ET
 Q
 Q
 q
-1 0 0 1 42 385.88980 cm
+1 0 0 1 42 372.68980 cm
 q
 BT 1 0 0 1 0 3.2 Tm 13.2 TL 0 0 0 rg /F2+0 10 Tf 13.2 TL (Languages:) Tj /F3+0 10 Tf 13.2 TL ( English, Hindi, Malayalam, Tamil) Tj T* ET
 Q
 Q
 q
-1 0 0 1 42 365.38980 cm
+1 0 0 1 42 352.18980 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F2+0 10.5 Tf 13 TL (RESEARCH PUBLICATION) Tj T* ET
 Q
 Q
 q
-1 0 0 1 42 362.68980 cm
+1 0 0 1 42 349.48980 cm
 q
 .9 w
 1 J
@@ -328,7 +336,7 @@ n 0 0 m 511.2756 0 l S
 Q
 Q
 q
-1 0 0 1 36 345.78980 cm
+1 0 0 1 36 332.58980 cm
 q
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
@@ -350,7 +358,7 @@ Q
 Q
 Q
 q
-1 0 0 1 42 320.18980 cm
+1 0 0 1 42 306.98980 cm
 q
 BT 1 0 0 1 6 14.8 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
 0 0 0 rg
@@ -358,7 +366,7 @@ BT 1 0 0 1 17 14.8 Tm /F3+0 10 Tf 12.4 TL (Built a RAG-based legal platform grou
 Q
 Q
 q
-1 0 0 1 42 294.58980 cm
+1 0 0 1 42 281.38980 cm
 q
 BT 1 0 0 1 6 14.8 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
 0 0 0 rg
@@ -366,14 +374,14 @@ BT 1 0 0 1 17 14.8 Tm /F3+0 10 Tf 12.4 TL (Engineered a four-stage pipeline with
 Q
 Q
 q
-1 0 0 1 42 274.08980 cm
+1 0 0 1 42 260.88980 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F2+0 10.5 Tf 13 TL (PROJECTS) Tj T* ET
 Q
 Q
 q
-1 0 0 1 42 271.38980 cm
+1 0 0 1 42 258.18980 cm
 q
 .9 w
 1 J
@@ -382,7 +390,7 @@ n 0 0 m 511.2756 0 l S
 Q
 Q
 q
-1 0 0 1 36 254.48980 cm
+1 0 0 1 36 241.28980 cm
 q
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
@@ -406,14 +414,14 @@ Q
 Q
 Q
 q
-1 0 0 1 42 241.58980 cm
+1 0 0 1 42 228.38980 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.4 Tm /F4+0 10 Tf 12.4 TL (Python, FastAPI, PostgreSQL \(pgvector\), Claude API) Tj T* ET
 Q
 Q
 q
-1 0 0 1 42 203.58980 cm
+1 0 0 1 42 190.38980 cm
 q
 BT 1 0 0 1 6 27.2 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
 0 0 0 rg
@@ -421,14 +429,14 @@ BT 1 0 0 1 17 27.2 Tm /F3+0 10 Tf 12.4 TL (Architected a multi-stage AI pipeline
 Q
 Q
 q
-1 0 0 1 42 177.98980 cm
+1 0 0 1 42 164.78980 cm
 q
 BT 1 0 0 1 6 14.8 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
 BT 1 0 0 1 17 14.8 Tm 12.4 TL 0 0 0 rg /F3+0 10 Tf 12.4 TL (Built citation-grounded semantic search by embedding every message into a pgvector index, powering streaming) Tj T* (natural-language Q) Tj (&) Tj (A where each answer cites the exact source messages retrieved.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 42 152.38980 cm
+1 0 0 1 42 139.18980 cm
 q
 BT 1 0 0 1 6 14.8 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
 0 0 0 rg
@@ -436,14 +444,14 @@ BT 1 0 0 1 17 14.8 Tm /F3+0 10 Tf 12.4 TL (Delivered a seven-module analytics da
 Q
 Q
 q
-1 0 0 1 42 131.88980 cm
+1 0 0 1 42 118.68980 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F2+0 10.5 Tf 13 TL (CERTIFICATES) Tj T* ET
 Q
 Q
 q
-1 0 0 1 42 129.18980 cm
+1 0 0 1 42 115.98980 cm
 q
 .9 w
 1 J
@@ -452,7 +460,7 @@ n 0 0 m 511.2756 0 l S
 Q
 Q
 q
-1 0 0 1 42 111.48976 cm
+1 0 0 1 42 98.28976 cm
 q
 .019608 .388235 .756863 RG
 n 218.3252 1.95 m 234.624 1.95 l S
@@ -460,7 +468,7 @@ BT 1 0 0 1 0 3.2 Tm 13.2 TL 0 0 0 rg /F3+0 10 Tf 13.2 TL (OCI Generative AI Prof
 Q
 Q
 q
-1 0 0 1 42 98.28976 cm
+1 0 0 1 42 85.08976 cm
 q
 .019608 .388235 .756863 RG
 n 211.2646 1.95 m 227.5635 1.95 l S
@@ -468,14 +476,14 @@ BT 1 0 0 1 0 3.2 Tm 13.2 TL 0 0 0 rg /F3+0 10 Tf 13.2 TL (OCI Data Science Profe
 Q
 Q
 q
-1 0 0 1 42 77.78976 cm
+1 0 0 1 42 64.58976 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F2+0 10.5 Tf 13 TL (EDUCATION) Tj T* ET
 Q
 Q
 q
-1 0 0 1 42 75.08976 cm
+1 0 0 1 42 61.88976 cm
 q
 .9 w
 1 J
@@ -484,7 +492,7 @@ n 0 0 m 511.2756 0 l S
 Q
 Q
 q
-1 0 0 1 36 58.18976 cm
+1 0 0 1 36 44.98976 cm
 q
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
@@ -863,7 +871,7 @@ endobj
 endobj
 27 0 obj
 <<
-/Length 9931
+/Length 10496
 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
@@ -889,7 +897,7 @@ q
 .019608 .388235 .756863 RG
 n 107.9449 1.95 m 210.0104 1.95 l S
 n 264.0582 1.95 m 321.6705 1.95 l S
-BT 1 0 0 1 0 3.2 Tm 74.31699 0 Td 13.2 TL 0 0 0 rg /F3+0 10 Tf 13.2 TL (GitHub: ) Tj .019608 .388235 .756863 rg (github.com/ashaheem32) Tj 0 0 0 rg (  ) Tj (|) Tj (  Portfolio: ) Tj .019608 .388235 .756863 rg (shaheeem.me) Tj 0 0 0 rg (  ) Tj (|) Tj (  Mobile: +971558289449) Tj T* -74.31699 0 Td ET
+BT 1 0 0 1 0 3.2 Tm 74.31699 0 Td 13.2 TL 0 0 0 rg /F3+0 10 Tf 13.2 TL (GitHub: ) Tj .019608 .388235 .756863 rg (github.com/ashaheem32) Tj 0 0 0 rg (  ) Tj (|) Tj (  Portfolio: ) Tj .019608 .388235 .756863 rg (shaheeem.me) Tj 0 0 0 rg (  ) Tj (|) Tj (  Mobile: +971588076040) Tj T* -74.31699 0 Td ET
 Q
 Q
 q
@@ -945,30 +953,38 @@ BT 1 0 0 1 42.00000 625.58980 Tm /F4+0 10 Tf (Full-time | Hyderabad, Telangana, 
 Q
 q
 0 0 0 rg
-BT 1 0 0 1 48 612.38980 Tm /F1 10 Tf (\177) Tj ET
+BT 1 0 0 1 48.00000 612.38980 Tm /F1 10 Tf () Tj ET
 Q
 q
 0 0 0 rg
-BT 1 0 0 1 59.00000 612.38980 Tm /F3+0 10 Tf (Contributed to AI engineering projects using Python, retrieval-augmented generation \(RAG\), and natural language) Tj ET
+BT 1 0 0 1 59.00000 612.38980 Tm /F3+0 10 Tf (Developed conversational AI workflows, including agent prompts, intent handling, fallback responses, and human) Tj ET
 Q
 q
 0 0 0 rg
-BT 1 0 0 1 59.00000 599.98980 Tm /F3+0 10 Tf (processing \(NLP\).) Tj ET
+BT 1 0 0 1 59.00000 599.98980 Tm /F3+0 10 Tf (handoff.) Tj ET
 Q
 q
 0 0 0 rg
-BT 1 0 0 1 48 587.58980 Tm /F1 10 Tf (\177) Tj ET
+BT 1 0 0 1 48.00000 587.58980 Tm /F1 10 Tf () Tj ET
 Q
 q
 0 0 0 rg
-BT 1 0 0 1 59.00000 587.58980 Tm /F3+0 10 Tf (Collaborated with colleagues to understand requirements, solve technical problems, and adapt to changing tools and) Tj ET
+BT 1 0 0 1 59.00000 587.58980 Tm /F3+0 10 Tf (Built retrieval-augmented generation \(RAG\) workflows to ground voice agent responses in business documents and) Tj ET
 Q
 q
 0 0 0 rg
-BT 1 0 0 1 59.00000 575.18980 Tm /F3+0 10 Tf (project needs.) Tj ET
+BT 1 0 0 1 59.00000 575.18980 Tm /F3+0 10 Tf (website content.) Tj ET
 Q
 q
-1 0 0 1 36 556.38980 cm
+0 0 0 rg
+BT 1 0 0 1 48.00000 562.78980 Tm /F1 10 Tf () Tj ET
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 59.00000 562.78980 Tm /F3+0 10 Tf (Integrated AI agents with APIs and business tools for appointment scheduling, lead capture, and call follow-up.) Tj ET
+Q
+q
+1 0 0 1 36 543.18980 cm
 q
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
@@ -982,7 +998,7 @@ q
 1 0 0 1 433.0158 0 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 2.4 Tm 4 0 Td /F2+0 10 Tf 12.4 TL (Aug 2024 \002 Dec 2025) Tj T* -4 0 Td ET
+BT 1 0 0 1 0 2.4 Tm 4 0 Td /F2+0 10 Tf 12.4 TL (Aug 2024 \002 Aug 2025) Tj T* -4 0 Td ET
 Q
 Q
 q
@@ -990,7 +1006,7 @@ Q
 Q
 Q
 q
-1 0 0 1 42 518.38980 cm
+1 0 0 1 42 505.18980 cm
 q
 BT 1 0 0 1 6 27.2 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
 0 0 0 rg
@@ -998,7 +1014,7 @@ BT 1 0 0 1 17 27.2 Tm /F3+0 10 Tf 12.4 TL (Completed 1,000+ LLM evaluation and R
 Q
 Q
 q
-1 0 0 1 42 492.78980 cm
+1 0 0 1 42 479.58980 cm
 q
 BT 1 0 0 1 6 14.8 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
 0 0 0 rg
@@ -1006,14 +1022,14 @@ BT 1 0 0 1 17 14.8 Tm /F3+0 10 Tf 12.4 TL (Maintained a consistent 4\0025 star q
 Q
 Q
 q
-1 0 0 1 42 472.28980 cm
+1 0 0 1 42 459.08980 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F2+0 10.5 Tf 13 TL (TECHNICAL SKILLS) Tj T* ET
 Q
 Q
 q
-1 0 0 1 42 469.58980 cm
+1 0 0 1 42 456.38980 cm
 q
 .9 w
 1 J
@@ -1022,44 +1038,44 @@ n 0 0 m 511.2756 0 l S
 Q
 Q
 q
-1 0 0 1 42 451.88980 cm
+1 0 0 1 42 438.68980 cm
 q
 BT 1 0 0 1 0 3.2 Tm 13.2 TL 0 0 0 rg /F2+0 10 Tf 13.2 TL (Programming:) Tj /F3+0 10 Tf 13.2 TL ( Python, SQL, TypeScript, JavaScript) Tj T* ET
 Q
 Q
 q
-1 0 0 1 42 425.48980 cm
+1 0 0 1 42 412.28980 cm
 q
 BT 1 0 0 1 0 16.4 Tm 13.2 TL 0 0 0 rg /F2+0 10 Tf 13.2 TL (LLM Systems:) Tj /F3+0 10 Tf 13.2 TL ( RAG pipelines, LangChain, vector databases \(pgvector, ChromaDB\), embeddings, OpenAI/Claude APIs, agentic) Tj T* (workflows, LLM evaluation & RLHF) Tj T* ET
 Q
 Q
 q
-1 0 0 1 42 412.28980 cm
+1 0 0 1 42 399.08980 cm
 q
 BT 1 0 0 1 0 3.2 Tm 13.2 TL 0 0 0 rg /F2+0 10 Tf 13.2 TL (ML & Computer Vision:) Tj /F3+0 10 Tf 13.2 TL ( PyTorch, Scikit-learn, OpenCV, YOLOv8, ByteTrack, MediaPipe, Pandas, NumPy) Tj T* ET
 Q
 Q
 q
-1 0 0 1 42 399.08980 cm
+1 0 0 1 42 385.88980 cm
 q
 BT 1 0 0 1 0 3.2 Tm 13.2 TL 0 0 0 rg /F2+0 10 Tf 13.2 TL (Backend & Infrastructure:) Tj /F3+0 10 Tf 13.2 TL ( FastAPI, RESTful APIs, Node.js, PostgreSQL, SQLite, Docker, AWS, Supabase, Pytest, Git/GitHub) Tj T* ET
 Q
 Q
 q
-1 0 0 1 42 385.88980 cm
+1 0 0 1 42 372.68980 cm
 q
 BT 1 0 0 1 0 3.2 Tm 13.2 TL 0 0 0 rg /F2+0 10 Tf 13.2 TL (Languages:) Tj /F3+0 10 Tf 13.2 TL ( English, Hindi, Malayalam, Tamil) Tj T* ET
 Q
 Q
 q
-1 0 0 1 42 365.38980 cm
+1 0 0 1 42 352.18980 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F2+0 10.5 Tf 13 TL (RESEARCH PUBLICATION) Tj T* ET
 Q
 Q
 q
-1 0 0 1 42 362.68980 cm
+1 0 0 1 42 349.48980 cm
 q
 .9 w
 1 J
@@ -1068,14 +1084,17 @@ n 0 0 m 511.2756 0 l S
 Q
 Q
 q
-1 0 0 1 36 345.78980 cm
+1 0 0 1 36 332.58980 cm
 q
 0 0 0 rg
+.019608 .388235 .756863 RG
+0.5 w
+n 0 1.15 m 35.32227 1.15 l S
 BT /F1 10 Tf 12 TL ET
 q
 1 0 0 1 0 0 cm
 q
-BT 1 0 0 1 0 2.4 Tm 12.4 TL 0 0 0 rg /F2+0 10 Tf 12.4 TL (JurisGPT: A Retrieval-Augmented Generation Based Legal Assistant for Indian Startups) Tj /F4+0 10 Tf 12.4 TL ( \(Accepted, IEEE\)) Tj T* ET
+BT 1 0 0 1 0 2.4 Tm 12.4 TL 0 0 0 rg /F2+0 10 Tf 12.4 TL  .019608 .388235 .756863 rg (JurisGPT) Tj 0 0 0 rg (: A Retrieval-Augmented Generation Based Legal Assistant for Indian Startups) Tj /F4+0 10 Tf 12.4 TL ( \(Accepted, IEEE\)) Tj T* ET
 Q
 Q
 q
@@ -1090,30 +1109,46 @@ Q
 Q
 Q
 q
-1 0 0 1 42 320.18980 cm
-q
-BT 1 0 0 1 6 14.8 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
 0 0 0 rg
-BT 1 0 0 1 17 14.8 Tm /F3+0 10 Tf 12.4 TL (Built a RAG-based legal platform grounding LLM responses in 8+ Indian statutory codes \(3,169 vector-indexed segments\)) Tj T* -0.110794 Tw (using ChromaDB HNSW and GPT-4o-mini; achieved 87% citation accuracy vs. 42% baseline, reducing hallucination by 79%.) Tj T* 0 Tw ET
-Q
+BT 1 0 0 1 48.00000 321.78980 Tm /F1 10 Tf () Tj ET
 Q
 q
-1 0 0 1 42 294.58980 cm
-q
-BT 1 0 0 1 6 14.8 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
 0 0 0 rg
-BT 1 0 0 1 17 14.8 Tm /F3+0 10 Tf 12.4 TL (Engineered a four-stage pipeline with sentence-boundary-aware chunking, 384-dim embeddings \(all-MiniLM-L6-v2\), and) Tj T* (a three-tier fallback architecture ensuring service continuity with end-to-end latency of 3\0027 seconds.) Tj T* ET
-Q
+BT 1 0 0 1 59.00000 321.78980 Tm /F3+0 10 Tf (Developed JurisGPT, a citation-grounded retrieval-augmented generation \(RAG\) assistant using 47,867 Indian legal) Tj ET
 Q
 q
-1 0 0 1 42 274.08980 cm
+0 0 0 rg
+BT 1 0 0 1 59.00000 309.38980 Tm /F3+0 10 Tf (documents and hybrid BM25lexical retrieval; achieved 84.17% Recall@5 and 0.9531 MRR on a 120-query,) Tj ET
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 59.00000 296.98980 Tm /F3+0 10 Tf (human-verified benchmark.) Tj ET
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 48.00000 283.78980 Tm /F1 10 Tf () Tj ET
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 59.00000 283.78980 Tm /F3+0 10 Tf (Evaluated five retrieval configurations and 40 generated answers; found that generic cross-encoder reranking reduced) Tj ET
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 59.00000 271.38980 Tm /F3+0 10 Tf (nDCG@5 by 8.716.3 points, while JurisGPT achieved 80% citation faithfulness and a 2.5% severe hallucination rate in the) Tj ET
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 59.00000 258.98980 Tm /F3+0 10 Tf (answer evaluation.) Tj ET
+Q
+q
+1 0 0 1 42 236.08980 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F2+0 10.5 Tf 13 TL (PROJECTS) Tj T* ET
 Q
 Q
 q
-1 0 0 1 42 271.38980 cm
+1 0 0 1 42 233.38980 cm
 q
 .9 w
 1 J
@@ -1122,7 +1157,7 @@ n 0 0 m 511.2756 0 l S
 Q
 Q
 q
-1 0 0 1 36 254.48980 cm
+1 0 0 1 36 216.48980 cm
 q
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
@@ -1146,14 +1181,14 @@ Q
 Q
 Q
 q
-1 0 0 1 42 241.58980 cm
+1 0 0 1 42 203.58980 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.4 Tm /F4+0 10 Tf 12.4 TL (Python, FastAPI, PostgreSQL \(pgvector\), Claude API) Tj T* ET
 Q
 Q
 q
-1 0 0 1 42 203.58980 cm
+1 0 0 1 42 165.58980 cm
 q
 BT 1 0 0 1 6 27.2 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
 0 0 0 rg
@@ -1161,14 +1196,14 @@ BT 1 0 0 1 17 27.2 Tm /F3+0 10 Tf 12.4 TL (Architected a multi-stage AI pipeline
 Q
 Q
 q
-1 0 0 1 42 177.98980 cm
+1 0 0 1 42 139.98980 cm
 q
 BT 1 0 0 1 6 14.8 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
 BT 1 0 0 1 17 14.8 Tm 12.4 TL 0 0 0 rg /F3+0 10 Tf 12.4 TL (Built citation-grounded semantic search by embedding every message into a pgvector index, powering streaming) Tj T* (natural-language Q) Tj (&) Tj (A where each answer cites the exact source messages retrieved.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 42 152.38980 cm
+1 0 0 1 42 114.38980 cm
 q
 BT 1 0 0 1 6 14.8 Tm /F1 10 Tf 12 TL 0 0 0 rg (\177) Tj ET
 0 0 0 rg
@@ -1176,14 +1211,14 @@ BT 1 0 0 1 17 14.8 Tm /F3+0 10 Tf 12.4 TL (Delivered a seven-module analytics da
 Q
 Q
 q
-1 0 0 1 42 131.88980 cm
+1 0 0 1 42 93.88980 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F2+0 10.5 Tf 13 TL (CERTIFICATES) Tj T* ET
 Q
 Q
 q
-1 0 0 1 42 129.18980 cm
+1 0 0 1 42 91.18980 cm
 q
 .9 w
 1 J
@@ -1192,7 +1227,7 @@ n 0 0 m 511.2756 0 l S
 Q
 Q
 q
-1 0 0 1 42 111.48976 cm
+1 0 0 1 42 73.48976 cm
 q
 .019608 .388235 .756863 RG
 n 218.3252 1.95 m 234.624 1.95 l S
@@ -1200,7 +1235,7 @@ BT 1 0 0 1 0 3.2 Tm 13.2 TL 0 0 0 rg /F3+0 10 Tf 13.2 TL (OCI Generative AI Prof
 Q
 Q
 q
-1 0 0 1 42 98.28976 cm
+1 0 0 1 42 60.28976 cm
 q
 .019608 .388235 .756863 RG
 n 211.2646 1.95 m 227.5635 1.95 l S
@@ -1208,14 +1243,14 @@ BT 1 0 0 1 0 3.2 Tm 13.2 TL 0 0 0 rg /F3+0 10 Tf 13.2 TL (OCI Data Science Profe
 Q
 Q
 q
-1 0 0 1 42 77.78976 cm
+1 0 0 1 42 39.78976 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F2+0 10.5 Tf 13 TL (EDUCATION) Tj T* ET
 Q
 Q
 q
-1 0 0 1 42 75.08976 cm
+1 0 0 1 42 37.08976 cm
 q
 .9 w
 1 J
@@ -1224,7 +1259,7 @@ n 0 0 m 511.2756 0 l S
 Q
 Q
 q
-1 0 0 1 36 58.18976 cm
+1 0 0 1 36 20.18976 cm
 q
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
@@ -1249,43 +1284,56 @@ Q
 
 endstream
 endobj
+28 0 obj
+<<
+/Type /Annot
+/Subtype /Link
+/Rect [ 36 332.5 71.322267 344.5 ]
+/Border [ 0.0 0.0 0.0 ]
+/A <<
+/S /URI
+/URI (https\072\057\057jurisgpt\056me)
+>>
+>>
+endobj
 xref
-0 28
+0 29
 0000000000 65535 f 
 0000000015 00000 n 
 0000000083 00000 n 
 0000000142 00000 n 
-0000000398 00000 n 
-0000000601 00000 n 
-0000000789 00000 n 
-0000000985 00000 n 
-0000001172 00000 n 
-0000001385 00000 n 
-0000001699 00000 n 
-0000002015 00000 n 
-0000012003 00000 n 
-0000012075 00000 n 
-0000012183 00000 n 
-0000013285 00000 n 
-0000013539 00000 n 
-0000027663 00000 n 
-0000028421 00000 n 
-0000029540 00000 n 
-0000029791 00000 n 
-0000043559 00000 n 
-0000044319 00000 n 
-0000045423 00000 n 
-0000045675 00000 n 
-0000059801 00000 n 
-0000060553 00000 n 
-0000060908 00000 n 
+0000000405 00000 n 
+0000000608 00000 n 
+0000000796 00000 n 
+0000000992 00000 n 
+0000001179 00000 n 
+0000001392 00000 n 
+0000001704 00000 n 
+0000002019 00000 n 
+0000012239 00000 n 
+0000012311 00000 n 
+0000012419 00000 n 
+0000013521 00000 n 
+0000013775 00000 n 
+0000027899 00000 n 
+0000028657 00000 n 
+0000029776 00000 n 
+0000030027 00000 n 
+0000043795 00000 n 
+0000044555 00000 n 
+0000045659 00000 n 
+0000045911 00000 n 
+0000060037 00000 n 
+0000060789 00000 n 
+0000061144 00000 n 
+0000071694 00000 n 
 trailer
 <<
-/Size 28
+/Size 29
 /Root 1 0 R
 /Info 26 0 R
 /ID [ (\075\030\206A\273\206\277\017\012b4\346\232\015\034\324) (\075\030\206A\273\206\277\017\012b4\346\232\015\034\324) ]
 >>
 startxref
-70892
+71859
 %%EOF
