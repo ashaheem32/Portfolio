@@ -102,13 +102,9 @@
     grid-template-columns: 1fr;
     gap: 38px;
   }
+  /* Photo is shown on desktop only */
   .portrait-wrap {
-    max-width: 480px;
-    width: 100%;
-  }
-  .portrait-wrap img {
-    aspect-ratio: 1 / 1.1;
-    object-position: center 25%;
+    display: none;
   }
   .about-copy > .about-lead {
     font-size: clamp(24px, 5vw, 30px);

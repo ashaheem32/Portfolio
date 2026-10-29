@@ -237,6 +237,15 @@
 .archive-number {
   color: #797973;
 }
+.archive-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 9px;
+  border: 1px solid #b5d59a40;
+  border-radius: 50px;
+  color: #b5d59a;
+}
 .archive-project-top .icon {
   margin-left: auto;
   color: #c0bfb8;

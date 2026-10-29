@@ -107,7 +107,9 @@ export default function Projects() {
           <p className="section-kicker">The project archive</p>
           <RevealHeading as="h3">More things I’ve built.</RevealHeading>
         </div>
-        <span className="archive-count">06 projects</span>
+        <span className="archive-count">
+          {String(otherProjects.length).padStart(2, "0")} projects
+        </span>
       </div>
       <div className="project-archive" id="project-archive">
         {otherProjects.map((project, index) => (
@@ -117,8 +119,16 @@ export default function Projects() {
             hidden={index > 2 && !showAll}
           >
             <div className="archive-project-top">
-              <span className="archive-number">0{index + 4}</span>
+              <span className="archive-number">
+                {String(index + 4).padStart(2, "0")}
+              </span>
               <span>{project.category}</span>
+              {project.status && (
+                <span className="archive-status">
+                  <span className="status-dot" />
+                  {project.status}
+                </span>
+              )}
               <Icon name="code" />
             </div>
             <h3>{project.title}</h3>
@@ -145,7 +155,7 @@ export default function Projects() {
           aria-expanded={showAll}
           aria-controls="project-archive"
         >
-          {showAll ? "Show fewer projects" : "View all 9 projects"}
+          {showAll ? "Show fewer projects" : `View all ${featuredProjects.length + otherProjects.length} projects`}
           <Icon name={showAll ? "close" : "plus"} />
         </button>
         <a

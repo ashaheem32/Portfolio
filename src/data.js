@@ -58,6 +58,24 @@ export const experience = [
       { value: "4–5", suffix: "★", label: "Consistent quality ratings" },
     ],
   },
+  {
+    id: "ichase",
+    company: "Ichase Pvt Ltd",
+    role: "Data Analyst",
+    location: "Remote",
+    startDate: "2024-08",
+    startLabel: "Aug 2024",
+    endDate: "2025-07",
+    endLabel: "July 2025",
+    icon: "grid",
+    headline: "Turning admissions data into reliable reporting.",
+    highlights: [
+      "Cleaned and consolidated student enquiry, application and admissions data, checking for duplicates and missing fields to support reliable reporting.",
+      "Prepared dashboards and recurring reports to track lead sources, counsellor follow-ups, application stages and enrolment trends.",
+      "Analysed conversion and drop-off patterns by programme, intake and channel, and shared findings with admissions and marketing teams.",
+    ],
+    skills: ["Data Analysis", "Data Cleaning", "Dashboards", "Reporting"],
+  },
 ];
 
 export const featuredProjects = [
@@ -100,6 +118,15 @@ export const featuredProjects = [
 ];
 
 export const otherProjects = [
+  {
+    title: "ZehnAI Voice Agent",
+    description:
+      "Bilingual English/Arabic voice assistant for an AI agency, built on the Gemini Live API. It explains services, asks about business needs and prepares consultation requests.",
+    technologies: ["Python", "FastAPI", "Gemini Live API", "WebSockets"],
+    github: "https://github.com/ashaheem32/Voice-agent-zehnai",
+    category: "Voice AI",
+    status: "Currently building",
+  },
   {
     title: "Lead Pilot",
     description:
