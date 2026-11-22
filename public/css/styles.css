@@ -317,6 +317,15 @@ main { position: relative; z-index: 1; }
   .footer span:nth-child(2) { display: none; }
 }
 
+/* short landscape screens (phones on their side): the contact block must fit inside the pinned stage */
+@media (max-height: 520px) and (orientation: landscape) {
+  .contact .chapter__head, .contact__note { display: none; }
+  .contact__body { gap: clamp(8px, 2.6vh, 14px); }
+  .display--center { max-width: none; font-size: clamp(22px, 9vh, 40px); }
+  .contact .btn { padding-top: 10px; padding-bottom: 10px; }
+  .contact .pin__stage { padding-bottom: 44px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
