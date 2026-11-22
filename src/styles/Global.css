@@ -91,7 +91,6 @@ html.lenis {
 }
 .hero-art,
 .footer-wordmark,
-.portrait-wrap,
 .project-visual {
   --reveal-opacity-duration: 1350ms;
   --reveal-transform-duration: 1650ms;
@@ -139,7 +138,6 @@ html.lenis {
   }
   .hero-art,
   .footer-wordmark,
-  .portrait-wrap,
   .project-visual {
     --reveal-opacity-duration: 1100ms;
     --reveal-transform-duration: 1350ms;

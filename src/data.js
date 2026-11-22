@@ -7,7 +7,6 @@ export const profile = {
   github: "https://github.com/ashaheem32",
   linkedin: "https://www.linkedin.com/in/shaheem32",
   resume: `${process.env.PUBLIC_URL}/assets/Mohammed_Shaheem_CV.pdf`,
-  portrait: `${process.env.PUBLIC_URL}/assets/pro_imgg.png`,
 };
 
 // Experience aligned with LinkedIn and the supplied UAE résumé.

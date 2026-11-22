@@ -8,56 +8,23 @@
 }
 .about-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);
-  gap: clamp(32px, 6vw, 110px);
-  max-width: 1150px;
-  margin: 0 auto;
-  align-items: start;
+  gap: 30px;
+  max-width: 1080px;
+  margin-left: 15%;
 }
-.portrait-wrap {
-  position: relative;
-  border-radius: 4px;
-  overflow: hidden;
-  margin-top: 6px;
+.about-lead {
+  font-size: clamp(24px, 2.5vw, 36px);
+  letter-spacing: -0.04em;
+  line-height: 1.35;
 }
-.portrait-wrap img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  filter: saturate(0.7);
-  transition: filter 500ms;
-}
-.portrait-wrap:hover img {
-  filter: saturate(1);
-}
-.portrait-caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 70px 24px 24px;
-  background: linear-gradient(transparent, #000b);
-  font-size: 13px;
+.about-lead span {
+  color: var(--muted);
 }
 .about-copy > p {
   color: var(--muted);
   font-size: 15px;
   line-height: 1.8;
   margin-bottom: 24px;
-}
-.about-copy > .about-lead {
-  color: var(--text);
-  font-size: clamp(23px, 2.2vw, 32px);
-  letter-spacing: -0.04em;
-  line-height: 1.35;
-  margin-bottom: 28px;
-}
-.about-lead span {
-  color: var(--muted);
 }
 .about-technologies {
   margin: 30px 0;
@@ -87,26 +54,39 @@
   padding-top: 23px;
   border-top: 1px solid var(--line);
   font-size: 13px;
+  margin-bottom: 0;
 }
-.about-copy .button {
-  margin-top: 6px;
+@media (min-width: 701px) {
+  .about-grid {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    gap: 36px clamp(32px, 6vw, 110px);
+  }
+  .about-lead {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .about-copy {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+  .about-actions {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+  }
 }
 @media (max-width: 900px) {
   .about-heading {
     margin-left: 0;
     margin-bottom: 42px;
   }
+  .about-grid {
+    margin-left: 0;
+  }
 }
 @media (max-width: 700px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 38px;
-  }
-  /* Photo is shown on desktop only */
-  .portrait-wrap {
-    display: none;
-  }
-  .about-copy > .about-lead {
+  .about-lead {
     font-size: clamp(24px, 5vw, 30px);
   }
   .about-copy > p {

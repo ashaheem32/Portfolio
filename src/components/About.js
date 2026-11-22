@@ -26,27 +26,14 @@ export default function About() {
         real-world intelligence.
       </RevealHeading>
       <div className="about-grid">
-        <FadeInSection className="portrait-wrap">
-          <img
-            src={profile.portrait}
-            alt={profile.name}
-            width="1122"
-            height="1402"
-            loading="lazy"
-          />
-          <div className="portrait-caption">
-            <span>Mohammed Shaheem</span>
-            <Icon name="spark" />
-          </div>
+        <FadeInSection as="p" className="about-lead">
+          Hi, I’m Mohammed Shaheem.{" "}
+          <span>
+            An AI engineer turning complex problems into thoughtful, practical
+            applications.
+          </span>
         </FadeInSection>
         <FadeInSection className="about-copy">
-          <p className="about-lead">
-            Hi, I’m Mohammed Shaheem.{" "}
-            <span>
-              An AI engineer turning complex problems into thoughtful, practical
-              applications.
-            </span>
-          </p>
           <p>
             I focus on LLMs, RAG, computer vision, and data science. My
             experience includes a full-time AI Engineer role at Atyuttama
@@ -73,6 +60,8 @@ export default function About() {
             Away from the keyboard? Tech gadgets, literary fiction, and probably
             one too many battle royale games.
           </p>
+        </FadeInSection>
+        <FadeInSection className="about-actions">
           <a
             className="button button--outline"
             href={profile.resume}
