@@ -1,0 +1,200 @@
+.hero {
+  min-height: min(900px, 100svh);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 170px;
+  position: relative;
+  background: #080808;
+}
+.hero-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: clamp(32px, 5vw, 80px);
+  align-items: end;
+  padding: 0 var(--gutter) 72px;
+}
+.hero-identity {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--muted);
+  font-size: 12px;
+  padding-bottom: 6px;
+}
+.hero-name {
+  font-size: 10px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: #a8a8a3;
+  margin-bottom: 21px;
+  line-height: 1.6;
+}
+.hero h1 {
+  max-width: 550px;
+  font-size: clamp(30px, 3.1vw, 48px);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.055em;
+}
+.hero-introduction .text-link {
+  margin-top: 20px;
+  color: #bdbdb7;
+  font-size: 12px;
+  border-color: #494945;
+}
+.hero-meta {
+  position: relative;
+  z-index: 2;
+  padding: 0 var(--gutter) 26px;
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  font-size: 12px;
+  color: #a8a8a3;
+}
+.hero-specialties {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hero-specialties span {
+  color: var(--accent);
+}
+.hero-meta > a {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+}
+.hero-meta .icon {
+  width: 13px;
+  height: 13px;
+}
+.hero-art {
+  padding: 0 var(--gutter) 22px;
+  position: relative;
+  isolation: isolate;
+}
+.hero-art .wordmark {
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 15px 22px #fe40122b);
+}
+.hero-glow {
+  position: absolute;
+  z-index: -1;
+  inset: -20% -15% -15%;
+  background: radial-gradient(
+      ellipse at 22% 82%,
+      #ff4828 0%,
+      #e52e148a 17%,
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse at 88% 110%,
+      #ffbb8555 0%,
+      #ce2b1480 22%,
+      transparent 49%
+    );
+  filter: blur(35px);
+  animation: ember-drift 12s ease-in-out infinite alternate;
+}
+.hero-grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.09;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23fff' filter='url(%23n)' opacity='.8' d='M0 0h180v180H0z'/%3E%3C/svg%3E");
+  mix-blend-mode: soft-light;
+}
+@keyframes ember-drift {
+  0% {
+    transform: translateX(-3%) scaleY(0.85);
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(8%) scaleY(1.15);
+    opacity: 0.85;
+  }
+}
+@media (min-width: 1800px) {
+  .hero {
+    padding-top: 200px;
+  }
+}
+@media (max-width: 1000px) {
+  .hero-specialties {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  .hero {
+    min-height: 0;
+    padding-top: clamp(116px, 18vw, 150px);
+    gap: clamp(48px, 9vw, 76px);
+  }
+  .hero-top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    padding-bottom: 0;
+  }
+  .hero-identity {
+    font-size: 12px;
+  }
+  .hero h1 {
+    font-size: clamp(34px, 6.8vw, 58px);
+    max-width: 650px;
+  }
+  .hero-name {
+    max-width: 100%;
+    line-height: 1.6;
+    font-size: 10px;
+    margin-bottom: 15px;
+  }
+  .hero-meta {
+    font-size: 12px;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 20px;
+  }
+  .hero-meta > p {
+    max-width: 220px;
+    line-height: 1.6;
+  }
+  .hero-meta > a {
+    white-space: nowrap;
+    gap: 5px;
+    flex-shrink: 0;
+  }
+  .hero-art {
+    padding-bottom: 25px;
+  }
+  .hero-glow {
+    filter: blur(22px);
+    inset: -70% -20% -10%;
+  }
+}
+@media (max-width: 480px) {
+  .hero-meta {
+    font-size: 11px;
+  }
+  .hero-meta > p {
+    max-width: 160px;
+  }
+  .hero-introduction .text-link {
+    font-size: 14px;
+  }
+}
+@media (max-height: 520px) and (max-width: 1024px) {
+  .hero {
+    padding-top: 104px;
+  }
+}
