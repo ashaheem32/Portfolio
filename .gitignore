@@ -27,7 +27,3 @@ yarn-error.log*
 PORTFOLIO_FEATURE_RECOMMENDATIONS.md
 
 .claude/
-
-# rendered film frames (regenerate with video-source/render.py)
-/video-source/frames
-__pycache__/

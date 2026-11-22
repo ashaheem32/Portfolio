@@ -1,0 +1,119 @@
+.about-section {
+  padding-top: var(--section-space);
+}
+.about-heading {
+  max-width: 1080px;
+  margin-left: 15%;
+  margin-bottom: clamp(36px, 6vw, 85px);
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);
+  gap: clamp(32px, 6vw, 110px);
+  max-width: 1150px;
+  margin: 0 auto;
+  align-items: start;
+}
+.portrait-wrap {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 6px;
+}
+.portrait-wrap img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  filter: saturate(0.7);
+  transition: filter 500ms;
+}
+.portrait-wrap:hover img {
+  filter: saturate(1);
+}
+.portrait-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 70px 24px 24px;
+  background: linear-gradient(transparent, #000b);
+  font-size: 13px;
+}
+.about-copy > p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+.about-copy > .about-lead {
+  color: var(--text);
+  font-size: clamp(23px, 2.2vw, 32px);
+  letter-spacing: -0.04em;
+  line-height: 1.35;
+  margin-bottom: 28px;
+}
+.about-lead span {
+  color: var(--muted);
+}
+.about-technologies {
+  margin: 30px 0;
+}
+.about-technologies > span {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--muted);
+  margin-bottom: 15px;
+}
+.about-technologies > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tech-pill {
+  font-size: 12px;
+  padding: 8px 12px;
+  border: 1px solid #363632;
+  border-radius: 50px;
+  display: inline-block;
+  line-height: 1.2;
+}
+.about-copy > .about-personal {
+  padding-top: 23px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+}
+.about-copy .button {
+  margin-top: 6px;
+}
+@media (max-width: 900px) {
+  .about-heading {
+    margin-left: 0;
+    margin-bottom: 42px;
+  }
+}
+@media (max-width: 700px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+  /* Photo is shown on desktop only */
+  .portrait-wrap {
+    display: none;
+  }
+  .about-copy > .about-lead {
+    font-size: clamp(24px, 5vw, 30px);
+  }
+  .about-copy > p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  .about-copy > .about-personal {
+    font-size: 14px;
+  }
+}
