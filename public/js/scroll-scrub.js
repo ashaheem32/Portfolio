@@ -38,7 +38,7 @@ export class ScrollScrubVideo {
     this.duration = 0;
     this.ready = false;
     this.blobs = {};
-    this.reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this._reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     this._tick = this._tick.bind(this);
     this.measure = this.measure.bind(this);
 
@@ -71,6 +71,11 @@ export class ScrollScrubVideo {
 
     this._load();
     this._raf = requestAnimationFrame(this._tick);
+  }
+
+  /** Read live, so switching Reduce Motion while the page is open takes effect. */
+  get reduced() {
+    return this._reducedMotion.matches;
   }
 
   get orientation() {
